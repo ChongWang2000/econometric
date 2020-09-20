@@ -132,13 +132,13 @@
                 <div class="page-left-menu-box">
                     <div class="menu1">
                         <div class="menu-item1">
-                            <a href="../../团队成员.html">
+                            <a href="{% url 'app:consultant_content' %}">
                                 荣誉顾问
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
                         </div>
 
                         <div class="menu-item1 active">
-                            <a href="business_team.html">
+                            <a href="{% url 'app:business_team' %}">
                                 公司团队
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
                         </div>
@@ -147,7 +147,7 @@
                     </div>
 
                 </div>
-                <img src="../../images/picture-20.png" alt="微信" class="wpica" style="width:180px;margin-left:30px;">
+                <img src="{% static 'images/picture-20.png' %}" alt="微信" class="wpica" style="width:180px;margin-left:30px;">
             </div>
             <div class="productmain" style="overflow: hidden;">
 
