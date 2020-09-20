@@ -36,10 +36,22 @@ urlpatterns = [
     # 产品系列
     url(r'^produce/', views.produce, name='produce'),
     # 产品系列文件夹
+    url(r'^simulation/', views.simulation, name='simulation'),
     url(r'^simulation_platform/', views.simulation_platform, name='simulation_platform'),
     url(r'^training_courses/', views.training_courses, name='training_courses'),
     url(r'^database/', views.database, name='database'),
     url(r'^research_report/', views.research_report, name='research_report'),
+    url(r'^peixun/', views.peixun, name='peixun'),
+    url(r'^xinwen/', views.xinwen, name='xinwen'),
+    url(r'^yanjiubaogao2/', views.yaniubaoao2, name='yanjiubaogao2'),
+    url(r'^yanjiubaogao3/', views.yaniubaoao3, name='yanjiubaogao3'),
+    url(r'^yanjiubaogao4/', views.yaniubaoao4, name='yanjiubaogao4'),
+    url(r'^yanjiubaogao5/', views.yaniubaoao5, name='yanjiubaogao5'),
+    url(r'^yanjiubaogao6/', views.yaniubaoao6, name='yanjiubaogao6'),
+    url(r'^yanjiubaogao7/', views.yaniubaoao7, name='yanjiubaogao7'),
+    url(r'^yanjiubaogao8/', views.yaniubaoao8, name='yanjiubaogao8'),
+    url(r'^ziliao/', views.ziliao, name='ziliao'),
+    url(r'^ruanjian/', views.ruanjian, name='ruanjian'),
 
     #人才招聘
     url(r'^recruitment/', views.recruitment, name='recruitment'),

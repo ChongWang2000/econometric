@@ -97,3 +97,51 @@ def database(request):
 
 def research_report(request):
     return render(request, 'html/产品系列/研究报告.html')
+
+
+def simulation(request):
+    return render(request, 'html/产品系列/仿真.html')
+
+
+def peixun(request):
+    return render(request, 'html/产品系列/培训.html')
+
+
+def xinwen(request):
+    return render(request, 'html/产品系列/新闻.html')
+
+
+def yaniubaoao2(request):
+    return render(request, 'html/产品系列/研究报告2.html')
+
+
+def yaniubaoao3(request):
+    return render(request, 'html/产品系列/研究报告3.html')
+
+
+def yaniubaoao4(request):
+    return render(request, 'html/产品系列/研究报告4.html')
+
+
+def yaniubaoao5(request):
+    return render(request, 'html/产品系列/研究报告5.html')
+
+
+def yaniubaoao6(request):
+    return render(request, 'html/产品系列/研究报告6.html')
+
+
+def yaniubaoao7(request):
+    return render(request, 'html/产品系列/研究报告7.html')
+
+
+def yaniubaoao8(request):
+    return render(request, 'html/产品系列/研究报告8.html')
+
+
+def ziliao(request):
+    return render(request, 'html/产品系列/资料.html')
+
+
+def ruanjian(request):
+    return render(request, 'html/产品系列/软件.html')

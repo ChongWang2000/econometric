@@ -1,84 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>数据软件 - Infinite-Sum Modeling</title>
-    <meta name="generator" content="angwo CMS" />
-    <meta name="author" content="" />
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="robots" content="all" />
-    <link rel="stylesheet" type="text/css" href="../../css/head.css">
-    <link rel="stylesheet" type="text/css" href="../../css/crumbs.css">
-    <link rel="stylesheet" type="text/css" href="../../css/page-left-menu.css">
-    <link rel="stylesheet" type="text/css" href="../../css/main-container.css">
-    <link rel="stylesheet" type="text/css" href="../../css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../../css/main-container--.css">
-</head>
-<body>
-<div class="navigation_bars" style="z-index:1">
-    <img class="logo0" src="../../images/logo0.jpg">
-    <img class="logo" src="../../images/logo.jpg">
-    <div class="navigation_textbox"><!--导航栏-->
-        <div class="text_field">
-            <a href="../../index首页.html" >首页</a>
-        </div>
-        <div class="text_field">
-            <span><a href="../../服务简介.html">关于我们</a></span>
-            <div class="menu">
-                <a href="../../服务简介.html">服务简介</a>
-                <a href="../关于我们/服务对象.html">服务对象</a>
-                <a href="../关于我们/公司文化.html">公司文化</a>
-                <a href="../关于我们/媒体引用.html">媒体引用</a>
-            </div>
-        </div>
-        <div class="text_field">
-            <span><a href="../../团队成员.html">团队成员</a></span>
-            <div class="menu">
-                <a href="../../团队成员.html">荣誉顾问</a>
-                <a href="../团队成员/business_team.html">公司团队</a>
-            </div>
-        </div>
-        <div class="text_field">
-            <span><a href="../../解决方案.html">解决方案</a></span>
-            <div class="menu">
-                <a href="../解决方案/trade.html">&nbsp;贸易&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="../解决方案/env.html">环境能源</a>
-                <a href="../解决方案/source.html">&nbsp;资源&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="../解决方案/agri.html">&nbsp;农业&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="../解决方案/finance.html">财政金融</a>
-                <a href="../解决方案/poverty.html">&nbsp;贫困&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="../解决方案/labor.html">&nbsp;劳动力&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="../解决方案/disaster.html">灾害评估</a>
-            </div>
-        </div>
-        <div class="text_field">
-            <span><a href="../../产品系列.html">产品系列</a></span>
-            <div class="menu">
-                <a href="../../产品系列.html">数据软件</a>
-                <a href="../产品系列/仿真平台.html">仿真平台</a>
-                <a href="../产品系列/培训课程.html">培训课程</a>
-                <a href="../产品系列/资料库.html">&nbsp;资料库&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                <a href="../产品系列/研究报告.html">研究报告</a>
-            </div>
-        </div>
-        <div class="text_field">
-            <span><a href="../../人才招聘.html">人才招聘</a></span>
-        </div>
-        <div class="text_field">
-            <span><a href="../../联系我们.html">联系我们</a></span>
-        </div>
-        <div class="btn_field">
-            <span><a href="../../用户端/2.0用户登录和注册入口.html">注册</a></span>
-        </div>
-        <div class="btn_field">
-            <span><a href="../../用户端/2.0用户登录和注册入口.html">登录</a></span>
-        </div>
-    </div>
-</div>
+{% extends 'base_index.html' %}
+{% load static %}
+
+{% block ext_css %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/crumbs.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/page-left-menu.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main-container.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main-container--.css' %}">
+{% endblock %}
+
+{% block ext_js %}
+    {{ block.super }}
+
+{% endblock %}
+
+{% block content %}
 <div class="crumbs">
     <div class="container">
         <p class="title">仿真平台</p>
@@ -354,44 +290,4 @@ Development Research 等。</span>
             </p>            </div>
             </div>
 </div>
-
-<div class="foot">
-    <div class="text_block">
-        <h4>关于我们</h4>
-        <p>企业简介</p>
-        <p>服务对象</p>
-        <p>公司文化</p>
-    </div>
-    <div class="text_block">
-        <h4>解决方案</h4>
-        <p>贸易</p>
-        <p>环境资源</p>
-        <p>资源</p>
-
-    </div>
-    <div class="text_block">
-        <h4>产品系列</h4>
-        <p>数据平台</p>
-        <p>仿真平台</p>
-        <p>资料库</p>
-    </div>
-    <div class="text_block">
-        <h4>人才招聘</h4>
-        <p>人才招聘</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-
-    </div>
-    <div class="text_block">
-        <h4>联系我们</h4>
-        <p>联系我们</p>
-        <p>&nbsp;</p>
-        <p>&nbsp;</p>
-    </div>
-
-</div>
-<div class="warranty">
-    <p>@copyright</p>
-</div>
-</body>
-</html>
+{% endblock %}
