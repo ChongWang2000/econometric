@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/head.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/menu.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/box.css"/>
+    	<meta http-equiv="CONTENT-TYPE" content="text/html;charest=utf-8">
+    	<script type="text/javascript" charset="utf-8" src="../../ueditor/ueditor.config.js"></script>
+    	<script type="text/javascript" charset="utf-8" src="../../ueditor/ueditor.all.js"></script>
+    	<link href="../../ueditor/themes/default/css/ueditor.css" rel="stylesheet">
+    	<script type="text/javascript" charset="utf-8" src="../../ueditor/lang/zh-cn/zh-cn.js"></script>
+    	<script type="text/javascript">
+    		UE.getEditor('editor');
+    	</script>
+
+    <title>页面管理-资源</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+
+    <style type="text/css">
+        input, select, textarea, th, td { font-size: 1em; }
+        ol.tree {padding: 0 0 0 30px;width: 220px;}
+        li {position: relative;margin-left: -15px;list-style: none;}
+        li.file{margin-left: -18px !important;}
+        li.file a{background: url(document.png) 0 0 no-repeat;color: #002446;padding-left: 21px;text-decoration:none;display: block;}
+        li input{position: absolute;left: 0;margin-left: 0;opacity: 0;z-index: 2;cursor: pointer;height: 1em;width:1em;top: 0;}
+        input + ol{display: none;}
+        input + ol > li { height: 0; overflow: hidden; margin-left: -14px !important; padding-left: 1px; }
+        li label {cursor: pointer;display: block;padding-left: 17px;background: url(toggle-small-expand.png) no-repeat 0px 1px;}
+        input:checked + ol {background: url(toggle-small.png) 44px 5px no-repeat;margin: -22px 0 0 -44px;padding:27px 0 0 80px;height: auto;display: block;}
+        input:checked + ol > li { height: auto;}
+        .tree{
+            border: 1px solid #e6e6e6;
+            float: left;
+            margin-top: 55px;
+            margin-right: 18px;
+            border-radius: 10px 10px 0 0;
+            width: 240px;
+            overflow: hidden;
+            margin-bottom: 600px;
+        }
+    </style>
+
+
+
+
+
+    <style type="text/css">
+        a{ text-decoration:none; color:black;}
+        a:hover{text-decoration:none; color:#336699;}
+        #tab{width:900px; padding:5px;height:820px;margin:20px;}
+        #tab ul{;width:900px;height:30px;line-height:30px; border-bottom:2px rgb(68, 87, 253) solid;}
+        #tab ul li{background:#FFF;cursor:pointer;float: left;list-style:none; width:100px;height:29px; line-height:29px;padding:0px 10px; margin:0px 10px; border:1px solid #BBB; border-bottom:2px solid #C88;}
+        #tab ul li.on{border-top:2px solid rgb(100, 156, 230); border-bottom:2px solid #FFF;}
+        .hide{display: none;}
+        .上边框{
+            float: left;
+        }
+    </style>
+    <script type="text/javascript">
+        // JS实现选项卡切换
+        window.onload = function(){
+            var myTab = document.getElementById("tab");    //整个div
+            var myUl = myTab.getElementsByTagName("ul")[0];//一个节点
+            var myLi = myUl.getElementsByTagName("li");    //数组
+            var myDiv=new Array();
+            myDiv[0] = document.getElementById("firstPage"); //数组
+            myDiv[1] = document.getElementById("secondPage");
+            myDiv[2] = document.getElementById("thirdPage");
+
+            for(var i = 0; i<myLi.length;i++){
+                myLi[i].index = i;
+                myLi[i].onclick = function(){
+                    for(var j = 0; j < myLi.length; j++){
+                        myLi[j].className="off";
+                        myDiv[j].className = "hide";
+                    }
+                    this.className = "on";
+                    myDiv[this.index].className = "show";
+                }
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        function getObjectURL(file){
+            console.log(file);
+            var url = null;
+            if(window.createObjectURL!=undefined){ // basic
+                url = window.createObjectURL(file);
+            }else if(window.URL!=undefined){ // mozilla(firefox)
+                url = window.URL.createObjectURL(file);
+            }else if(window.webkitURL!=undefined){ // webkit or chrome
+                url = window.webkitURL.createObjectURL(file);
+            }
+            console.log(url);
+            return url;
+        }
+        //jq 调用方法
+        $('#oneJq').on('change',function(){
+            $('#showOneJq').empty().append('<img style="max-width:200px; max-height:200px;" src="' + getObjectURL(this.files[0]) + '" />');
+        });
+
+        $('#twoJq').on('change',function(){
+            var This = this;
+            $('#showTwoJq').empty();
+            for(var i = 0; i < This.files.length ; i ++){
+                $('#showTwoJq').append('<img style="max-width:200px; max-height:200px;" src="' + getObjectURL(This.files[i]) + '" />');
+            }
+        });
+        //原生JS调用方法
+        //添加图片元素
+        function createImg(imgEle , file , parEle){
+            imgEle.setAttribute('style','max-width:200px;max-height:200px;');
+            imgEle.setAttribute('src',getObjectURL(file));
+            document.getElementById(parEle).appendChild(imgEle);
+        }
+        document.getElementById('oneJs').addEventListener( 'change' , function(e){
+            var img = document.createElement('img');
+            document.getElementById('showOneJs').innerHTML = '';
+            createImg(img , e.target.files[0] , 'showOneJs');
+        } , false );
+
+        document.getElementById('twoJs').addEventListener( 'change' , function(e){
+            var img = [];
+            document.getElementById('showTwoJs').innerHTML = '';
+            for(var i = 0; i < e.target.files.length ; i ++){
+                img[i] = document.createElement('img');
+                createImg(img[i] , e.target.files[i] , 'showTwoJs');
+            }
+        } , false );
+    </script>
+
+
+</head>
+
+<body class="color">
+<div class="head">
+    <div class="head01"></div>
+    <div class="head02">平台管理系统</div>
+    <div class="head03"></div>
+</div>
+<div class="menu" >
+    <ul class="sonarmenu">
+        <li><a href="1.1个人注册信息.html">注册信息</a></li>
+        <li><a href="2.1总账目查询.html">账目查询</a></li>
+        <li><a href="3.算法管理.html">算法管理</a></li>
+        <li><a href="4.1个人信息管理.html">用户详细信息</a></li>
+        <li><a href="5.1使用概况.html">查询记录</a></li>
+        <li><a href="6.价格管理.html">价格管理</a></li>
+        <li><a href="7.页面管理.html">页面管理</a><br/></li>
+    </ul>
+</div>
+
+<ol class="tree">
+    <li>
+        <label for="folder0">首页</label> <input id="folder0" type="checkbox">
+
+    </li>
+    <li>
+        <label for="folder1">解决方案</label> <input id="folder1" type="checkbox" checked="checked">
+        <ol>
+            <li class="file"><a href="#">解决方案</a></li>
+            <li>
+                <label for="subfolder1" >农业</label> <input id="subfolder1" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder1">环境能源</label> <input id="subfolder1" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder1">投资金融</label> <input id="subfolder1" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder1">资源</label> <input id="subfolder1" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder1">灾害评估</label> <input id="subfolder1" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder1">贫困</label> <input id="subfolder1" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder1">劳动力</label> <input id="subfolder1" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder1">国际贸易</label> <input id="subfolder1" type="checkbox">
+            </li>
+        </ol>
+    </li>
+
+
+
+    <li>
+        <label for="folder2">关于我们</label> <input id="folder2" type="checkbox">
+        <ol>
+            <li>
+                <label for="subfolder2">服务简介</label> <input id="subfolder2" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder2">服务对象</label> <input id="subfolder2" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder2">公司文化</label> <input id="subfolder2" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder2">媒体引用</label> <input id="subfolder2" type="checkbox">
+            </li>
+        </ol>
+    </li>
+    <li>
+        <label for="folder3">产品系列</label> <input id="folder3" type="checkbox">
+        <ol>
+            <li>
+                <label for="subfolder3">数据软件</label> <input id="subfolder3" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder3">仿真平台</label> <input id="subfolder3" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder3">培训课程</label> <input id="subfolder3" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder3">资料库</label> <input id="subfolder3" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder3">研究报告</label> <input id="subfolder3" type="checkbox">
+            </li>
+        </ol>
+    </li>
+    <li>
+        <label for="folder4">团队成员</label> <input id="folder4" type="checkbox">
+        <ol>
+            <li>
+                <label for="subfolder4">荣誉顾问</label> <input id="subfolder4" type="checkbox">
+            </li>
+            <li>
+                <label for="subfolder4">公司团队</label> <input id="subfolder4" type="checkbox">
+            </li>
+
+        </ol>
+    </li>
+
+    <li>
+        <label for="folder6">联系我们</label> <input id="folder6" type="checkbox">
+    </li>
+</ol>
+
+<div class="上边框" id = "tab">
+    <ul>
+        <li class="off" style="margin-left: 250px">图片</li>
+        <li class="on">文字</li>
+        <li class="off">超链接</li>
+    </ul>
+    <div id="firstPage" class="hide">
+        <div class="carousel-item active" title="01">
+                        <h3>01</h3>
+            <img id="img1" src="../../images/img-29.png" height=200>
+        </div>
+                <div class="carousel-item" title="02" >
+                        <h3>02</h3>
+            <img id="img2" src="../../images/img-30.png" height=200>
+        </div>
+                <div class="carousel-item" title="02" >
+                        <h3>02</h3>
+            <img id="img3" src="../../images/img-31.png" height=200>
+        </div>
+                <div class="carousel-item" title="02" >
+                        <h3>02</h3>
+            <img id="img4" src="../../images/img-1.png" height=200>
+        </div>
+
+
+        <table>
+            <tr>
+                <td>请选择要修改的图片编号</td>
+                <td>
+                    <label>
+                        <select id="sel" style="width: 500px;float: left" onchange="cge()">
+                            <option value="img1">01</option>
+                            <option value="img2">02</option>
+                            <option value="img3">03</option>
+                            <option value="img4">04</option>
+                        </select>
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <input type="file">
+            </tr>
+            <tr>
+                <td><input type="submit" value="提交"></td>
+            </tr>
+        </table>
+
+        <script>
+            function cge(){
+                var sel=document.getElementById('sel');
+                var sid=sel.selectedIndex;
+                return sel[sid].value;
+            }
+          var fileInput = document.querySelector('input[type=file]');
+          fileInput.addEventListener('change', function () {
+              var previewImg = document.getElementById(cge());
+              var file = this.files[0];
+              var reader = new FileReader();
+              // 监听reader对象的的onload事件，当图片加载完成时，把base64编码賦值给预览图片
+              reader.addEventListener("load", function () {
+                  previewImg.src = reader.result;
+              }, false);
+              // 调用reader.readAsDataURL()方法，把图片转成base64
+              reader.readAsDataURL(file);
+          }, false);
+        </script>
+    </div>
+
+    <div id="secondPage" class="show">
+
+        <table>
+            <tr>
+                <td>选择文字</td>
+                <td>
+                    <select style="width: 500px;float: left">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="margin-left: 500px;">
+                <td >修改内容</td>
+                <td><textarea name="editor" id="editor" style="width: 800px; height: 400px; "></textarea></td>
+            </tr>
+            <tr>
+                <td>添加附件</td><td><input type="file" name="file"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="提交"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="thirdPage" class = "hide">
+
+        <h4>超链接</h4>
+         <table>
+                    <tr>
+                        <td>选择超链接</td>
+                        <td>
+                            <select style="width: 500px;float: left">
+                                <option value="无">无</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>修改为</td>
+
+                        <td><input type="url" name="daohanglan_shouye" style="width: 500px;float: left"/></td>
+                    </tr>
+             <tr>
+                 <td>
+                 <input type="submit" value="提交" >
+                </td>
+             </tr>
+         </table>
+    </div>
+</div>
+
+</body>
+</html>

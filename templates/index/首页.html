@@ -1,0 +1,149 @@
+{% extends 'base_index.html' %}
+{% load static %}
+
+{% block ext_css %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/1120.css' %}">
+
+{% endblock %}
+
+
+{% block ext_js %}
+    {{ block.super }}
+
+{% endblock %}
+
+{% block content %}
+    <div class="slideshow_bars">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+            <!-- 指示符 -->
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+            </ul>
+
+            <!-- 轮播图片 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/images/slide1.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/slide2.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/slide3.jpg">
+                </div>
+            </div>
+
+            <!-- 左右切换按钮 -->
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+
+        </div>
+    </div>
+    <div class="img_text_one">
+        <img src="/static/images/1.jpg">
+        <div class="intro">
+            <h style="font-size:20px;color:#00a3d9;">欢迎来到政策模拟平台</h>
+            <h style="color:gray;">
+                政策模拟是利用已经估出参数值的经济计量模型，计算出不同政策方案的后果，以便进行政策评价。进行政策模拟时，首先给出不同政策方案的假设条件，即政策变量的数值，或结构参数的变动值，然后用模型计算出不同假设条件下内生变量的数值。它可用简化式进行模拟，也可用结构式进行模拟。由于经济和社会现象的影响因素很多，不能保持其他因素不变，在实验室进行有控制的实验，确定某种因素单独的作用。
+            </h>
+            <a href="关于我们.html">
+                <button> 查看更多>></button>
+            </a>
+
+        </div>
+    </div>
+    <div class="img_text_two">
+        <h1>—————————</h1>
+        <h2>产品介绍</h2>
+        <h1>—————————</h1>
+        <div class="graphic_1">
+            <img src="/static/images/2.jpg">
+            <a href="html/产品系列/仿真.html?cid=188&amp;id=120">
+                <p class="childTitle">
+                <h3>世界经济模型 </h3></p>
+            </a>
+            <a href="html/产品系列/仿真.html?cid=188&amp;id=120">
+                <p class="childInfo">世界经济模型（world economic models）是指用定量方法构造的描述世界大部分国家和地区综合经济发展状况的模型。</p>
+            </a>
+        </div>
+        <div class="graphic_1">
+            <img src="/static/images/3.jpg">
+            <a href="html/产品系列/仿真.html?cid=188&amp;id=120">
+                <p class="childTitle">
+                <h3>东亚十国模型 </h3></p>
+            </a>
+            <a href="html/产品系列/仿真.html?cid=188&amp;id=120">
+                <p class="childInfo">东盟十国包括老挝 、柬埔寨 、缅甸 、泰国 、越南 、马来西亚 、新加坡 、汶莱 、菲律宾 、印尼。</p>
+            </a>
+        </div>
+        <div class="graphic_1">
+            <img src="/static/images/4.jpg">
+            <a href="html/产品系列/仿真.html?cid=188&amp;id=120">
+                <p class="childTitle">
+                <h3>一带一路模型 </h3></p>
+            </a>
+            <a href="html/产品系列/仿真.html?cid=188&amp;id=120">
+                <p class="childInfo">“一带一路”（The Belt and Road，缩写B&R）是“丝绸之路经济带”和“21世纪海上丝绸之路”的简称。</p>
+            </a>
+        </div>
+    </div>
+    <div class="img_text_three">
+        <div class="graphic_2">
+            <img src="/static/images/5.jpg">
+            <h1>—————————</h1>
+            <h2>团队成员</h2>
+            <h1>—————————</h1>
+        </div>
+        <div class="graphic_2">
+            <img src="/static/images/6.jpg">
+            <h1>—————————</h1>
+            <h2>关于我们</h2>
+            <h1>—————————</h1>
+        </div>
+        <div class="graphic_2">
+            <img src="/static/images/7.jpg">
+            <h1>—————————</h1>
+            <h2>人才招聘</h2>
+            <h1>—————————</h1>
+        </div>
+    </div>
+    <div class="img_text_four">
+        <h1>—————————</h1>
+        <h2>解决方案</h2>
+        <h1>—————————</h1>
+    </div>
+    <div class="img_text_five">
+        <div class="graphic_3">
+            <img src="/static/images/9.jpg">
+            <p>投资策略</p>
+        </div>
+        <div class="graphic_3">
+            <img src="/static/images/10.jpg">
+            <p>国际贸易</p>
+        </div>
+        <div class="graphic_3">
+            <img src="/static/images/11.jpg">
+            <p>环境资源</p>
+        </div>
+        <div class="graphic_3">
+            <img src="/static/images/12.jpg">
+            <p>资源</p>
+        </div>
+        <div class="graphic_3">
+            <img src="/static/images/13.jpg">
+            <p>灾害评估</p>
+        </div>
+        <div class="graphic_3">
+            <img src="/static/images/14.jpg">
+            <p>劳动力</p>
+        </div>
+    </div>
+{% endblock %}

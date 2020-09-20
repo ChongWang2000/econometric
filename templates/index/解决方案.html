@@ -1,0 +1,184 @@
+{% extends 'base_index.html' %}
+{% load static %}
+
+{% block ext_css %}
+    {{ block.super }}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/crumbs.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/page-left-menu.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main-container.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main-container-solution.css' %}">
+
+{% endblock %}
+
+
+{% block ext_js %}
+    {{ block.super }}
+
+{% endblock %}
+
+{% block content %}
+  <div class="crumbs">
+      <div class="container">
+          <p class="title">解决方案</p>
+          <div class="childs">
+              <a href="index.html">首页</a>&nbsp;&gt;&nbsp;<a href="解决方案.html">解决方案</a>&nbsp;&gt;&nbsp;贸易           </div>
+      </div>
+  </div>
+    <div class="main">
+
+      <div class="container">
+        <div class="page-left-menu" style="margin-top: 0px;">
+            <div class="page-left-title">
+                <h1>
+                    <span class="zh">解决方案</span>
+                    <small class="en"> / SOLUTION</small>
+                </h1>
+            </div>
+            <div class="page-left-menu-box">
+                <div class="menu1">
+                    <div class="menu-item1 " data-type="181">
+                        <a href="{% url 'app:trade' %}">
+                            贸易 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
+                    </div>
+
+                    <div class="menu-item1 " data-type="188">
+                        <a href="{% url 'app:env' %}">
+                            环境能源 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
+                    </div>
+
+                    <div class="menu-item1 " data-type="187">
+                        <a href="{% url 'app:source' %}">
+                            资源 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
+                    </div>
+
+                    <div class="menu-item1 " data-type="186">
+                        <a href="{% url 'app:agri' %}">
+                            农业 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
+                    </div>
+
+                    <div class="menu-item1 " data-type="11">
+                        <a href="{% url 'app:finance' %}">
+                            财政金融 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
+                    </div>
+
+                    <div class="menu-item1 " data-type="11">
+                        <a href="{% url 'app:poverty' %}">
+                            贫困 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
+                    </div>
+
+                    <div class="menu-item1" data-type="11">
+                        <a href="{% url 'app:labor' %}">
+                            劳动力 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
+                    </div>
+
+                    <div class="menu-item1 " data-type="11">
+                        <a href="{% url 'app:disaster' %}">
+                            灾害评估 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&gt;&gt; </a>
+                    </div>
+
+                </div>
+            </div>
+            <img class="wpica" style="width:180px;margin-left:30px;" alt="微信" src="{% static 'images/picture-20.png' %}"></div>
+
+        <div class="mainContent" style="overflow: hidden;padding-top: 0">
+          <div class="child left">
+            <p class="childTitle"><a href="html/解决方案/trade.html">国际贸易</a></p>
+            <div class="childImg">
+              <a href="html/解决方案/trade.html"><img src="images/img-2.png"></a>
+            </div>
+            <div class="childInfo">
+              <p>国际贸易主要研究贸易政策，尤其是贸易协议的签订，对目标区域的社会经济效应，如GDP、就业、进出口、最终消费、投资与储蓄等。适用范围（但不仅限于）：跨太平洋战略经济伙伴关系协定（TPP）、区域全面经济伙伴关系协定（RCEP）、中澳自贸协定、中国自由贸易试验区等。</p>
+              <p>
+                <a href=""></a>
+              </p>
+            </div>
+          </div>
+          <div class="child left">
+            <p class="childTitle"><a href="html/解决方案/env.html">环境能源</a></p>
+            <div class="childImg">
+              <a href="html/解决方案/env.html"><img src="images/img-3.png"></a>
+            </div>
+            <div class="childInfo">
+              <p>碳税，碳排放，碳交易机制，能源，环境，污染物排放</p>
+              <p>
+                <a href=""></a>
+              </p>
+            </div>
+          </div>
+          <div class="child left">
+            <p class="childTitle"><a href="html/解决方案/source.html">资源</a></p>
+            <div class="childImg">
+              <a href="html/解决方案/source.html"><img src="images/img-4.png"></a>
+            </div>
+            <div class="childInfo">
+              <p>研究宏观政策以及资源政策对水土资源的配置、利用效率的影响</p>
+              <p>
+                <a href=""></a>
+              </p>
+            </div>
+          </div>
+          <div class="child left">
+            <p class="childTitle"><a href="html/解决方案/disaster.html">灾害评估</a></p>
+            <div class="childImg">
+              <a href="html/解决方案/disaster.html"><img src="images/img-5.png"></a>
+            </div>
+            <div class="childInfo">
+              <p>利用CGE模型评估不同自然灾害（洪灾、旱灾、水污染和水生态，滑坡，泥石流，地震）的经济影响</p>
+              <p>
+                <a href=""></a>
+              </p>
+            </div>
+          </div>
+          <div class="child left">
+            <p class="childTitle"><a href="html/解决方案/labor.html">劳动力 </a></p>
+            <div class="childImg">
+              <a href="html/解决方案/labor.html"><img src="images/img-6.png"></a>
+            </div>
+            <div class="childInfo">
+              <p>就业率，工资，劳动力转移</p>
+              <p>
+                <a href=""></a>
+              </p>
+            </div>
+          </div>
+          <div class="child left">
+            <p class="childTitle"><a href="html/解决方案/poverty.html">贫困</a></p>
+            <div class="childImg">
+              <a href="html/解决方案/poverty.html"><img src="images/img-7.png"></a>
+            </div>
+            <div class="childInfo">
+              <p>研究全球贸易、环境政策、宏观经济政策、气候变化以及相关政策等对目标国家贫困的影响</p>
+              <p>
+                <a href=""></a>
+              </p>
+            </div>
+          </div>
+          <div class="child left">
+            <p class="childTitle"><a href="html/解决方案/finance.html">金融</a></p>
+            <div class="childImg">
+              <a href="html/解决方案/finance.html"><img src="images/img-8.png"></a>
+            </div>
+            <div class="childInfo">
+              <p>将金融变量及金融部门引入CGE模型，评估财政政策、汇率变动等外来冲击对经济体的影响</p>
+              <p>
+                <a href=""></a>
+              </p>
+            </div>
+          </div>
+          <div class="child left">
+            <p class="childTitle"><a href="html/解决方案/agri.html">农业</a></p>
+            <div class="childImg">
+              <a href="html/解决方案/agri.html"><img src="images/img-9.png"></a>
+            </div>
+            <div class="childInfo">
+              <p>宏观政策、农业政策对单个产业部门或多产业部门的影响。如种植结构调整、农业补贴、农产品贸易、农产品库存等政策分析</p>
+              <p>
+                <a href=""></a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+          </div>
+{% endblock %}
