@@ -103,7 +103,7 @@
     <div class="container">
         <p class="title">荣誉顾问</p>
         <div class="childs">
-            <a href="../../index首页.html">首页</a>&nbsp;&gt;&nbsp;<a href="../../团队成员.html">团队成员</a>&nbsp;&gt;&nbsp;公司团队
+            <a href="{% url 'app:index' %}">首页</a>&nbsp;&gt;&nbsp;<a href="{% url 'app:teammember' %}">团队成员</a>&nbsp;&gt;&nbsp;公司团队
         </div>
     </div>
 </div>
@@ -159,7 +159,7 @@
                         <h5>Harsha Vardhana Singh</h5>
                     </div>
                     <div class="content_img">
-                        <img src="../../images/img1.jpg" />
+                        <img src="{% static 'images/img1.jpg' %}" />
                     </div>
                     </div>
                     <div class="content_info">

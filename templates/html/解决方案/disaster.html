@@ -25,7 +25,7 @@
       <div class="container">
           <p class="title">解决方案</p>
           <div class="childs">
-              <a href="../../index首页.html">首页</a>&nbsp;&gt;&nbsp;<a href="../../解决方案.html">解决方案</a>&nbsp;&gt;&nbsp;灾害评估      </div>
+              <a href="{% url 'app:index' %}">首页</a>&nbsp;&gt;&nbsp;<a href="{% url 'app:solution' %}">解决方案</a>&nbsp;&gt;&nbsp;灾害评估      </div>
       </div>
   </div>
 
@@ -107,7 +107,7 @@
               <a href="http://v.t.sina.com.cn/share/share.php?title=灾害评估 /solutionshow.php">
                   <div class="child">
                       <div class="childIcon">
-                          <img src="templates/default/images/weibo.png">
+                          <img src="{% static 'images/weibo.png' %}">
                       </div>
                       <div class="childInfo">
                           <p>分享到</p>
@@ -136,7 +136,7 @@
                       with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
                   </script>
                   <div class="childIcon">
-                      <img src="templates/default/images/wechat.png">
+                      <img src="{% static 'images/wechat.png' %}">
                   </div>
                   <div class="childInfo">
                       <p>分享到</p>
@@ -146,7 +146,7 @@
               <a onclick="window.open('http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(document.location.href));return false;">
                   <div class="child">
                       <div class="childIcon">
-                          <img src="templates/default/images/qqzone.png">
+                          <img src="{% static 'images/qqzone.png' %}">
                       </div>
                       <div class="childInfo">
                           <p>分享到</p>
@@ -157,7 +157,7 @@
               <a href="mailto:?subject=灾害评估&amp;body=/solutionshow.php">
                   <div class="child">
                       <div class="childIcon">
-                          <img src="templates/default/images/email.png">
+                          <img src="{% static 'images/email.png' %}">
                       </div>
                       <div class="childInfo">
                           <p>通过邮件</p>
@@ -176,7 +176,7 @@
               <div class="container">
                   <div class="child">
                           <div class="childImg">
-                              <img src="../../images/img-1.png">
+                              <img src="{% static 'images/img-1.png' %}">
                           </div>
 
                           <div class="childTitle">
