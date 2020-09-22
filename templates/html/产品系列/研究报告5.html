@@ -67,15 +67,15 @@
     <div class="container" style="overflow: hidden;">
         <!-- <div class="banner"></div>
         <p class="title1">研究报告分类</p> -->
-        <div class="mainNav">
-            <div class="child">    <a href="研究报告.html" style="color: #666;">所有</a></div>
-            <div class="child"> <a href="研究报告2.html" style="color: #666;">贸易</a> </div>
-            <div class="child">    <a href="研究报告3.html" style="color: #666;">贫困</a></div>
-            <div class="child">    <a href="研究报告4.html" style="color: #666;">财政金融</a></div>
-            <div class="child on">    <a href="研究报告5.html" style="color: #0093c4;">能源和资源</a></div>
-            <div class="child">    <a href="研究报告6.html" style="color: #666;">劳动力</a></div>
-            <div class="child">    <a href="研究报告7.html" style="color: #666;">农业</a></div>
-            <div class="child">    <a href="研究报告8.html" style="color: #666;">其他</a></div>
+    <div class="mainNav">
+            <div class="child">    <a href="{% url 'app:research_report' %}"  style="color: #666;">所有</a></div>
+            <div class="child"> <a href="{% url 'app:yanjiubaogao2' %}" style="color: #666;">贸易</a> </div>
+            <div class="child">    <a href="{% url 'app:yanjiubaogao3' %}" style="color: #666;">贫困</a></div>
+            <div class="child">    <a href="{% url 'app:yanjiubaogao4' %}" style="color: #666;">财政金融</a></div>
+            <div class="child on">    <a href="{% url 'app:yanjiubaogao5' %}" style="color: #0093c4;">能源和资源</a></div>
+            <div class="child">    <a href="{% url 'app:yanjiubaogao6' %}" style="color: #666;">劳动力</a></div>
+            <div class="child">    <a href="{% url 'app:yanjiubaogao7' %}" style="color: #666;">农业</a></div>
+            <div class="child">    <a href="{% url 'app:yanjiubaogao8' %}" style="color: #666;">其他</a></div>
         </div>
 
 
@@ -87,7 +87,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=177">美欧贸易矛盾升级  贸易战经济影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=177">美欧贸易矛盾升级  贸易战经济影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -101,7 +101,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=176">“一带一路”基础设施发展对贸易成本冲击影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=176">“一带一路”基础设施发展对贸易成本冲击影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -115,7 +115,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=175">“一带一路”战略对沿线国家经济影响研究——基于CGE模型分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=175">“一带一路”战略对沿线国家经济影响研究——基于CGE模型分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -129,7 +129,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=219&amp;id=174">新一轮减税政策对供给侧结构性改革影响几何？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}219&amp;id=174">新一轮减税政策对供给侧结构性改革影响几何？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -143,7 +143,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=172">中美贸易战经济影响的定量分析：基于全球CGE模型应用</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=172">中美贸易战经济影响的定量分析：基于全球CGE模型应用</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -157,7 +157,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=171">英国脱欧困境：经济一体化断裂下的危机？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=171">英国脱欧困境：经济一体化断裂下的危机？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -171,7 +171,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=169">政策红利还能走多远？数据看大湾区房地产市场影响机制 --粤港澳大湾区区域经济观察系列（五）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=169">政策红利还能走多远？数据看大湾区房地产市场影响机制 --粤港澳大湾区区域经济观察系列（五）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -185,7 +185,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=168">城市竞合与粤港澳大湾区创新协同发展 --粤港澳大湾区区域经济观察系列（四）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=168">城市竞合与粤港澳大湾区创新协同发展 --粤港澳大湾区区域经济观察系列（四）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -199,7 +199,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=167">打造“下一个硅谷”：粤港澳大湾区创新型经济发展前景与挑战 --粤港澳大湾区区域经济观察系列（三）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=167">打造“下一个硅谷”：粤港澳大湾区创新型经济发展前景与挑战 --粤港澳大湾区区域经济观察系列（三）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -213,7 +213,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=166">粤港澳大湾区离“世界级城市群”还有多远？ --粤港澳大湾区区域经济观察系列（二）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=166">粤港澳大湾区离“世界级城市群”还有多远？ --粤港澳大湾区区域经济观察系列（二）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -227,7 +227,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=222&amp;id=165">塔桑尼亚吸烟率下降的经济和环境影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}222&amp;id=165">塔桑尼亚吸烟率下降的经济和环境影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -241,7 +241,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=164">从珠三角到粤港澳大湾区：区域经济转型路在何方？--粤港澳大湾区区域经济观察系列（一）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=164">从珠三角到粤港澳大湾区：区域经济转型路在何方？--粤港澳大湾区区域经济观察系列（一）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -255,7 +255,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=163">增值税调整势在必行？政策信号释放经济利好</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=163">增值税调整势在必行？政策信号释放经济利好</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -269,7 +269,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=162">能源改革背后的经济学思考（三）：国际油价强势上涨，国内经济如何应对？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=162">能源改革背后的经济学思考（三）：国际油价强势上涨，国内经济如何应对？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -283,7 +283,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=161">我国再次自主降关税，助推产业升级发展</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=161">我国再次自主降关税，助推产业升级发展</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -297,7 +297,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=160">英国退欧后单边贸易自由化分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=160">英国退欧后单边贸易自由化分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -311,7 +311,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=158">能源改革背后的经济学思考（二）：煤炭去产能对供给侧结构性改革影响几何？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=158">能源改革背后的经济学思考（二）：煤炭去产能对供给侧结构性改革影响几何？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -325,7 +325,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=157">中美“独角兽企业”大比拼：创新企业的机遇与挑战</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=157">中美“独角兽企业”大比拼：创新企业的机遇与挑战</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -339,7 +339,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=156">能源改革背后的经济学思考（一）：天然气改革的经济效应</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=156">能源改革背后的经济学思考（一）：天然气改革的经济效应</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -353,7 +353,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=155">北美自贸协议谈判重启，美对外经贸关系或将重新洗牌</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=155">北美自贸协议谈判重启，美对外经贸关系或将重新洗牌</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -367,7 +367,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=154">租金暴涨触碰了谁的痛点？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=154">租金暴涨触碰了谁的痛点？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -381,7 +381,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=152">中美贸易摩擦出现新转机？数据看中美经济未来走势</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=152">中美贸易摩擦出现新转机？数据看中美经济未来走势</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -395,7 +395,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=151">重振美国汽车业能否再现"美国制造"图景？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=151">重振美国汽车业能否再现"美国制造"图景？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -409,7 +409,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=150">东亚老龄化国家护理服务政策方案以及对家庭和劳动力市场的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=150">东亚老龄化国家护理服务政策方案以及对家庭和劳动力市场的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -423,7 +423,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=149">人口统计变化对巴西消费和温室气体排放的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=149">人口统计变化对巴西消费和温室气体排放的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -437,7 +437,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=148">巴西电力行业投资的经济和区域影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=148">巴西电力行业投资的经济和区域影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -451,7 +451,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=222&amp;id=145">农产品出口导向与食品供应是否存在正向协同作用？——基于非洲经济的分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}222&amp;id=145">农产品出口导向与食品供应是否存在正向协同作用？——基于非洲经济的分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -465,7 +465,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=221&amp;id=143">ASEAN国家在不同生产率假设下的经济增长预测</a></p>
+                        <p><a href="{% url 'app:xinwen' %}221&amp;id=143">ASEAN国家在不同生产率假设下的经济增长预测</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -479,7 +479,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=142">贸易逆差的五大误区</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=142">贸易逆差的五大误区</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -493,7 +493,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=141">美国退出巴黎协议对中国煤炭产出以及周边国家的碳排放的间接影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=141">美国退出巴黎协议对中国煤炭产出以及周边国家的碳排放的间接影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -507,7 +507,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=140">美国在中国和墨西哥的离岸活动的经济影响定量分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=140">美国在中国和墨西哥的离岸活动的经济影响定量分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -521,7 +521,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=139">美国退出跨太平洋伙伴关系协定（TPP）对加拿大的经济影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=139">美国退出跨太平洋伙伴关系协定（TPP）对加拿大的经济影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -535,7 +535,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=138">CGE模型研究的国际前沿—GTAP年会主题及论文</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=138">CGE模型研究的国际前沿—GTAP年会主题及论文</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -549,7 +549,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=136">美国钢铝关税影响的量化分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=136">美国钢铝关税影响的量化分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -563,7 +563,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=135">全球贸易分析项目—GTAP</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=135">全球贸易分析项目—GTAP</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -577,7 +577,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=134">人工智能经济与公共政策</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=134">人工智能经济与公共政策</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -591,7 +591,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=131">CGE模型与发展中国家政策制定</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=131">CGE模型与发展中国家政策制定</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -605,7 +605,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=221&amp;id=130">中国的经济和贸易增长对发达国家劳动力的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}221&amp;id=130">中国的经济和贸易增长对发达国家劳动力的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -619,7 +619,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=219&amp;id=128">美国税改对中国及全球经济的影响与对策</a></p>
+                        <p><a href="{% url 'app:xinwen' %}219&amp;id=128">美国税改对中国及全球经济的影响与对策</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -633,7 +633,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=218&amp;id=127">减缓气候变化政策与发展中国家贫困问题</a></p>
+                        <p><a href="{% url 'app:xinwen' %}218&amp;id=127">减缓气候变化政策与发展中国家贫困问题</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -647,7 +647,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=221&amp;id=126">东亚和东南亚地区的人口流动和经济增长</a></p>
+                        <p><a href="{% url 'app:xinwen' %}221&amp;id=126">东亚和东南亚地区的人口流动和经济增长</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -661,7 +661,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=222&amp;id=125">北美蔬果消费变化的影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}222&amp;id=125">北美蔬果消费变化的影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -675,7 +675,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=124">巴黎气候协定和全球经济：谁输谁赢？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=124">巴黎气候协定和全球经济：谁输谁赢？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -689,7 +689,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=123">提高水资源使用效率对南亚国家的经济影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=123">提高水资源使用效率对南亚国家的经济影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -703,7 +703,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=222&amp;id=121">千禧年回合的农产品和非农产品贸易自由化</a></p>
+                        <p><a href="{% url 'app:xinwen' %}222&amp;id=121">千禧年回合的农产品和非农产品贸易自由化</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -717,7 +717,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=118">土地利用机会成本与全球农林业温室气体减排潜力</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=118">土地利用机会成本与全球农林业温室气体减排潜力</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -731,7 +731,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=113">北美自由贸易协议(NAFTA)重新谈判：如果美国走了怎么办？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=113">北美自由贸易协议(NAFTA)重新谈判：如果美国走了怎么办？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -745,7 +745,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=112">新“TPP全面与进展协定”的定量分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=112">新“TPP全面与进展协定”的定量分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -759,7 +759,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=218&amp;id=110">自由贸易与发展中国家的贫困结构</a></p>
+                        <p><a href="{% url 'app:xinwen' %}218&amp;id=110">自由贸易与发展中国家的贫困结构</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -773,7 +773,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=109">全球贸易战继续升级：特朗普钢铝关税新政解读</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=109">全球贸易战继续升级：特朗普钢铝关税新政解读</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -787,7 +787,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=96">加入还是不加入？加拿大与跨太平洋伙伴关系协定（TPP）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=96">加入还是不加入？加拿大与跨太平洋伙伴关系协定（TPP）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -801,7 +801,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=95">加拿大-韩国自由贸易协定（CKFTA）：这对加拿大意味着什么？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=95">加拿大-韩国自由贸易协定（CKFTA）：这对加拿大意味着什么？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -815,7 +815,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=93">保护主义与报复主义</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=93">保护主义与报复主义</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -829,7 +829,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=92">美国边境调整税（BAT）经济影响的定量分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=92">美国边境调整税（BAT）经济影响的定量分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -843,7 +843,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=221&amp;id=91">在CGE贸易政策模拟中校准工资 - 生产率的变化</a></p>
+                        <p><a href="{% url 'app:xinwen' %}221&amp;id=91">在CGE贸易政策模拟中校准工资 - 生产率的变化</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -857,7 +857,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=90">跨太平洋伙伴关系协定（TPP）：对加拿大卑诗省的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=90">跨太平洋伙伴关系协定（TPP）：对加拿大卑诗省的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -871,7 +871,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=89">谈判中的TPP协议影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=89">谈判中的TPP协议影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -885,7 +885,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=88">TPP对加拿大菜籽油行业的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=88">TPP对加拿大菜籽油行业的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -902,7 +902,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=219&amp;id=87">自由贸易协定对加拿大金融服务部门影响的定量分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}219&amp;id=87">自由贸易协定对加拿大金融服务部门影响的定量分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -916,7 +916,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=86">加拿大 - 中国自由贸易协定量化分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=86">加拿大 - 中国自由贸易协定量化分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -930,7 +930,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=85">大区域贸易协定对被排除国家的溢出效应的定量分析：对东非的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=85">大区域贸易协定对被排除国家的溢出效应的定量分析：对东非的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -944,7 +944,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=84">英国退出欧盟的相关贸易影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=84">英国退出欧盟的相关贸易影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -958,7 +958,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=83">地方层面的贸易政策分析：在GTAP模型中用省代替加拿大</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=83">地方层面的贸易政策分析：在GTAP模型中用省代替加拿大</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -972,7 +972,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=82">跨太平洋伙伴关系协定（TPP）：谈判的“着陆区”</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=82">跨太平洋伙伴关系协定（TPP）：谈判的“着陆区”</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -986,7 +986,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=81">台湾加入TPP对美国的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=81">台湾加入TPP对美国的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1001,7 +1001,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=80">谈判中的加拿大 - 韩国自由贸易协定（CKFTA）的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=80">谈判中的加拿大 - 韩国自由贸易协定（CKFTA）的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1015,7 +1015,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=79">加拿大贸易协定的省级影响：安大略省和加拿大 - 韩国自由贸易协定（CKFTA）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=79">加拿大贸易协定的省级影响：安大略省和加拿大 - 韩国自由贸易协定（CKFTA）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1029,7 +1029,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=78">加拿大 - 韩国自由贸易协定(CKFTA)中服务贸易自由化</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=78">加拿大 - 韩国自由贸易协定(CKFTA)中服务贸易自由化</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1043,7 +1043,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=77">台湾加入TPP对加拿大的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=77">台湾加入TPP对加拿大的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1057,7 +1057,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=76">加拿大 - 韩国自由贸易协定（CKFTA）初探</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=76">加拿大 - 韩国自由贸易协定（CKFTA）初探</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1071,7 +1071,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=75">加拿大是否应该单方面采取全球自由贸易？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=75">加拿大是否应该单方面采取全球自由贸易？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1085,7 +1085,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=71">特朗普经济政策的初步解析及对我国经济潜在影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=71">特朗普经济政策的初步解析及对我国经济潜在影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1104,7 +1104,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=177">美欧贸易矛盾升级  贸易战经济影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=177">美欧贸易矛盾升级  贸易战经济影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1118,7 +1118,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=172">中美贸易战经济影响的定量分析：基于全球CGE模型应用</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=172">中美贸易战经济影响的定量分析：基于全球CGE模型应用</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1132,7 +1132,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=171">英国脱欧困境：经济一体化断裂下的危机？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=171">英国脱欧困境：经济一体化断裂下的危机？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1146,7 +1146,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=161">我国再次自主降关税，助推产业升级发展</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=161">我国再次自主降关税，助推产业升级发展</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1160,7 +1160,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=160">英国退欧后单边贸易自由化分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=160">英国退欧后单边贸易自由化分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1174,7 +1174,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=155">北美自贸协议谈判重启，美对外经贸关系或将重新洗牌</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=155">北美自贸协议谈判重启，美对外经贸关系或将重新洗牌</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1188,7 +1188,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=152">中美贸易摩擦出现新转机？数据看中美经济未来走势</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=152">中美贸易摩擦出现新转机？数据看中美经济未来走势</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1202,7 +1202,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=151">重振美国汽车业能否再现"美国制造"图景？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=151">重振美国汽车业能否再现"美国制造"图景？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1216,7 +1216,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=142">贸易逆差的五大误区</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=142">贸易逆差的五大误区</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1230,7 +1230,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=139">美国退出跨太平洋伙伴关系协定（TPP）对加拿大的经济影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=139">美国退出跨太平洋伙伴关系协定（TPP）对加拿大的经济影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1244,7 +1244,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=136">美国钢铝关税影响的量化分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=136">美国钢铝关税影响的量化分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1258,7 +1258,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=113">北美自由贸易协议(NAFTA)重新谈判：如果美国走了怎么办？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=113">北美自由贸易协议(NAFTA)重新谈判：如果美国走了怎么办？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1272,7 +1272,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=112">新“TPP全面与进展协定”的定量分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=112">新“TPP全面与进展协定”的定量分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1286,7 +1286,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=109">全球贸易战继续升级：特朗普钢铝关税新政解读</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=109">全球贸易战继续升级：特朗普钢铝关税新政解读</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1300,7 +1300,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=97">自由贸易：为什么单边自由贸易对加拿大有利？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=97">自由贸易：为什么单边自由贸易对加拿大有利？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1314,7 +1314,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=96">加入还是不加入？加拿大与跨太平洋伙伴关系协定（TPP）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=96">加入还是不加入？加拿大与跨太平洋伙伴关系协定（TPP）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1328,7 +1328,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=95">加拿大-韩国自由贸易协定（CKFTA）：这对加拿大意味着什么？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=95">加拿大-韩国自由贸易协定（CKFTA）：这对加拿大意味着什么？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1342,7 +1342,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=93">保护主义与报复主义</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=93">保护主义与报复主义</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1356,7 +1356,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=92">美国边境调整税（BAT）经济影响的定量分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=92">美国边境调整税（BAT）经济影响的定量分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1370,7 +1370,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=90">跨太平洋伙伴关系协定（TPP）：对加拿大卑诗省的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=90">跨太平洋伙伴关系协定（TPP）：对加拿大卑诗省的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1384,7 +1384,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=89">谈判中的TPP协议影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=89">谈判中的TPP协议影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1398,7 +1398,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=88">TPP对加拿大菜籽油行业的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=88">TPP对加拿大菜籽油行业的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1415,7 +1415,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=86">加拿大 - 中国自由贸易协定量化分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=86">加拿大 - 中国自由贸易协定量化分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1429,7 +1429,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=85">大区域贸易协定对被排除国家的溢出效应的定量分析：对东非的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=85">大区域贸易协定对被排除国家的溢出效应的定量分析：对东非的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1443,7 +1443,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=84">英国退出欧盟的相关贸易影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=84">英国退出欧盟的相关贸易影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1457,7 +1457,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=83">地方层面的贸易政策分析：在GTAP模型中用省代替加拿大</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=83">地方层面的贸易政策分析：在GTAP模型中用省代替加拿大</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1471,7 +1471,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=82">跨太平洋伙伴关系协定（TPP）：谈判的“着陆区”</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=82">跨太平洋伙伴关系协定（TPP）：谈判的“着陆区”</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1485,7 +1485,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=81">台湾加入TPP对美国的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=81">台湾加入TPP对美国的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1500,7 +1500,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=80">谈判中的加拿大 - 韩国自由贸易协定（CKFTA）的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=80">谈判中的加拿大 - 韩国自由贸易协定（CKFTA）的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1514,7 +1514,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=79">加拿大贸易协定的省级影响：安大略省和加拿大 - 韩国自由贸易协定（CKFTA）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=79">加拿大贸易协定的省级影响：安大略省和加拿大 - 韩国自由贸易协定（CKFTA）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1528,7 +1528,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=78">加拿大 - 韩国自由贸易协定(CKFTA)中服务贸易自由化</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=78">加拿大 - 韩国自由贸易协定(CKFTA)中服务贸易自由化</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1542,7 +1542,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=77">台湾加入TPP对加拿大的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=77">台湾加入TPP对加拿大的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1556,7 +1556,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=76">加拿大 - 韩国自由贸易协定（CKFTA）初探</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=76">加拿大 - 韩国自由贸易协定（CKFTA）初探</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1570,7 +1570,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=75">加拿大是否应该单方面采取全球自由贸易？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=75">加拿大是否应该单方面采取全球自由贸易？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1584,7 +1584,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=217&amp;id=71">特朗普经济政策的初步解析及对我国经济潜在影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}217&amp;id=71">特朗普经济政策的初步解析及对我国经济潜在影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1600,7 +1600,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=218&amp;id=127">减缓气候变化政策与发展中国家贫困问题</a></p>
+                        <p><a href="{% url 'app:xinwen' %}218&amp;id=127">减缓气候变化政策与发展中国家贫困问题</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1614,7 +1614,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=218&amp;id=110">自由贸易与发展中国家的贫困结构</a></p>
+                        <p><a href="{% url 'app:xinwen' %}218&amp;id=110">自由贸易与发展中国家的贫困结构</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1630,7 +1630,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=219&amp;id=174">新一轮减税政策对供给侧结构性改革影响几何？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}219&amp;id=174">新一轮减税政策对供给侧结构性改革影响几何？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1644,7 +1644,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=219&amp;id=128">美国税改对中国及全球经济的影响与对策</a></p>
+                        <p><a href="{% url 'app:xinwen' %}219&amp;id=128">美国税改对中国及全球经济的影响与对策</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1658,7 +1658,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=219&amp;id=87">自由贸易协定对加拿大金融服务部门影响的定量分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}219&amp;id=87">自由贸易协定对加拿大金融服务部门影响的定量分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1674,7 +1674,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=162">能源改革背后的经济学思考（三）：国际油价强势上涨，国内经济如何应对？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=162">能源改革背后的经济学思考（三）：国际油价强势上涨，国内经济如何应对？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1688,7 +1688,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=158">能源改革背后的经济学思考（二）：煤炭去产能对供给侧结构性改革影响几何？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=158">能源改革背后的经济学思考（二）：煤炭去产能对供给侧结构性改革影响几何？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1702,7 +1702,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=156">能源改革背后的经济学思考（一）：天然气改革的经济效应</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=156">能源改革背后的经济学思考（一）：天然气改革的经济效应</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1716,7 +1716,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=149">人口统计变化对巴西消费和温室气体排放的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=149">人口统计变化对巴西消费和温室气体排放的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1730,7 +1730,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=148">巴西电力行业投资的经济和区域影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=148">巴西电力行业投资的经济和区域影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1744,7 +1744,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=141">美国退出巴黎协议对中国煤炭产出以及周边国家的碳排放的间接影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=141">美国退出巴黎协议对中国煤炭产出以及周边国家的碳排放的间接影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1758,7 +1758,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=124">巴黎气候协定和全球经济：谁输谁赢？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=124">巴黎气候协定和全球经济：谁输谁赢？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1772,7 +1772,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=123">提高水资源使用效率对南亚国家的经济影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=123">提高水资源使用效率对南亚国家的经济影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1786,7 +1786,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=220&amp;id=118">土地利用机会成本与全球农林业温室气体减排潜力</a></p>
+                        <p><a href="{% url 'app:xinwen' %}220&amp;id=118">土地利用机会成本与全球农林业温室气体减排潜力</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1802,7 +1802,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=221&amp;id=143">ASEAN国家在不同生产率假设下的经济增长预测</a></p>
+                        <p><a href="{% url 'app:xinwen' %}221&amp;id=143">ASEAN国家在不同生产率假设下的经济增长预测</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1816,7 +1816,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=221&amp;id=130">中国的经济和贸易增长对发达国家劳动力的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}221&amp;id=130">中国的经济和贸易增长对发达国家劳动力的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1830,7 +1830,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=221&amp;id=126">东亚和东南亚地区的人口流动和经济增长</a></p>
+                        <p><a href="{% url 'app:xinwen' %}221&amp;id=126">东亚和东南亚地区的人口流动和经济增长</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1844,7 +1844,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=221&amp;id=91">在CGE贸易政策模拟中校准工资 - 生产率的变化</a></p>
+                        <p><a href="{% url 'app:xinwen' %}221&amp;id=91">在CGE贸易政策模拟中校准工资 - 生产率的变化</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1860,7 +1860,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=222&amp;id=165">塔桑尼亚吸烟率下降的经济和环境影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}222&amp;id=165">塔桑尼亚吸烟率下降的经济和环境影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1874,7 +1874,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=222&amp;id=145">农产品出口导向与食品供应是否存在正向协同作用？——基于非洲经济的分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}222&amp;id=145">农产品出口导向与食品供应是否存在正向协同作用？——基于非洲经济的分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1888,7 +1888,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=222&amp;id=125">北美蔬果消费变化的影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}222&amp;id=125">北美蔬果消费变化的影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1902,7 +1902,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=222&amp;id=121">千禧年回合的农产品和非农产品贸易自由化</a></p>
+                        <p><a href="{% url 'app:xinwen' %}222&amp;id=121">千禧年回合的农产品和非农产品贸易自由化</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1918,7 +1918,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=176">“一带一路”基础设施发展对贸易成本冲击影响分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=176">“一带一路”基础设施发展对贸易成本冲击影响分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1932,7 +1932,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=175">“一带一路”战略对沿线国家经济影响研究——基于CGE模型分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=175">“一带一路”战略对沿线国家经济影响研究——基于CGE模型分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1946,7 +1946,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=173">粤港澳大湾区发展现状与未来展望</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=173">粤港澳大湾区发展现状与未来展望</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1960,7 +1960,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=169">政策红利还能走多远？数据看大湾区房地产市场影响机制 --粤港澳大湾区区域经济观察系列（五）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=169">政策红利还能走多远？数据看大湾区房地产市场影响机制 --粤港澳大湾区区域经济观察系列（五）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1974,7 +1974,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=168">城市竞合与粤港澳大湾区创新协同发展 --粤港澳大湾区区域经济观察系列（四）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=168">城市竞合与粤港澳大湾区创新协同发展 --粤港澳大湾区区域经济观察系列（四）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -1988,7 +1988,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=167">打造“下一个硅谷”：粤港澳大湾区创新型经济发展前景与挑战 --粤港澳大湾区区域经济观察系列（三）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=167">打造“下一个硅谷”：粤港澳大湾区创新型经济发展前景与挑战 --粤港澳大湾区区域经济观察系列（三）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2002,7 +2002,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=166">粤港澳大湾区离“世界级城市群”还有多远？ --粤港澳大湾区区域经济观察系列（二）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=166">粤港澳大湾区离“世界级城市群”还有多远？ --粤港澳大湾区区域经济观察系列（二）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2016,7 +2016,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=164">从珠三角到粤港澳大湾区：区域经济转型路在何方？--粤港澳大湾区区域经济观察系列（一）</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=164">从珠三角到粤港澳大湾区：区域经济转型路在何方？--粤港澳大湾区区域经济观察系列（一）</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2030,7 +2030,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=163">增值税调整势在必行？政策信号释放经济利好</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=163">增值税调整势在必行？政策信号释放经济利好</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2044,7 +2044,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=157">中美“独角兽企业”大比拼：创新企业的机遇与挑战</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=157">中美“独角兽企业”大比拼：创新企业的机遇与挑战</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2058,7 +2058,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=154">租金暴涨触碰了谁的痛点？</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=154">租金暴涨触碰了谁的痛点？</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2072,7 +2072,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=150">东亚老龄化国家护理服务政策方案以及对家庭和劳动力市场的影响</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=150">东亚老龄化国家护理服务政策方案以及对家庭和劳动力市场的影响</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2086,7 +2086,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=140">美国在中国和墨西哥的离岸活动的经济影响定量分析</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=140">美国在中国和墨西哥的离岸活动的经济影响定量分析</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2100,7 +2100,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=138">CGE模型研究的国际前沿—GTAP年会主题及论文</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=138">CGE模型研究的国际前沿—GTAP年会主题及论文</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2114,7 +2114,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=135">全球贸易分析项目—GTAP</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=135">全球贸易分析项目—GTAP</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2128,7 +2128,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=134">人工智能经济与公共政策</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=134">人工智能经济与公共政策</a></p>
                     </div>
                 </div>
                 <div class="childContent">
@@ -2142,7 +2142,7 @@
                         <div class="sub sub2"></div>
                     </div>
                     <div class="title">
-                        <p><a href="新闻.html?cid=228&amp;id=131">CGE模型与发展中国家政策制定</a></p>
+                        <p><a href="{% url 'app:xinwen' %}228&amp;id=131">CGE模型与发展中国家政策制定</a></p>
                     </div>
                 </div>
                 <div class="childContent">
