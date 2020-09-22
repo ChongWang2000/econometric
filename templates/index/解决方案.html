@@ -82,9 +82,9 @@
 
         <div class="mainContent" style="overflow: hidden;padding-top: 0">
           <div class="child left">
-            <p class="childTitle"><a href="html/解决方案/trade.html">国际贸易</a></p>
+            <p class="childTitle"><a href="{% url 'app:trade' %}">国际贸易</a></p>
             <div class="childImg">
-              <a href="html/解决方案/trade.html"><img src="images/img-2.png"></a>
+              <a href="{% url 'app:trade' %}"><img src="{% static 'images/img-2.png' %}"></a>
             </div>
             <div class="childInfo">
               <p>国际贸易主要研究贸易政策，尤其是贸易协议的签订，对目标区域的社会经济效应，如GDP、就业、进出口、最终消费、投资与储蓄等。适用范围（但不仅限于）：跨太平洋战略经济伙伴关系协定（TPP）、区域全面经济伙伴关系协定（RCEP）、中澳自贸协定、中国自由贸易试验区等。</p>
@@ -94,9 +94,9 @@
             </div>
           </div>
           <div class="child left">
-            <p class="childTitle"><a href="html/解决方案/env.html">环境能源</a></p>
+            <p class="childTitle"><a href="{% url 'app:env' %}">环境能源</a></p>
             <div class="childImg">
-              <a href="html/解决方案/env.html"><img src="images/img-3.png"></a>
+              <a href="{% url 'app:env' %}"><img src="{% static 'images/img-3.png' %}"></a>
             </div>
             <div class="childInfo">
               <p>碳税，碳排放，碳交易机制，能源，环境，污染物排放</p>
@@ -106,9 +106,9 @@
             </div>
           </div>
           <div class="child left">
-            <p class="childTitle"><a href="html/解决方案/source.html">资源</a></p>
+            <p class="childTitle"><a href="{% url 'app:source' %}">资源</a></p>
             <div class="childImg">
-              <a href="html/解决方案/source.html"><img src="images/img-4.png"></a>
+              <a href="{% url 'app:source' %}"><img src="{% static 'images/img-4.png'  %}"></a>
             </div>
             <div class="childInfo">
               <p>研究宏观政策以及资源政策对水土资源的配置、利用效率的影响</p>
