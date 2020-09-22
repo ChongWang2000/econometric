@@ -7,11 +7,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/page-left-menu.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main-container.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/main-container-solution.css' %}">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="robots" content="all">
 {% endblock %}
 
 {% block ext_js %}
@@ -24,7 +19,7 @@
         <div class="container">
             <p class="title">解决方案</p>
             <div class="childs">
-                <a href="../../index首页.html">首页</a>&nbsp;&gt;&nbsp;<a href="../../解决方案.html">解决方案</a>&nbsp;&gt;&nbsp;国际贸易
+                <a href="{% url 'app:index' %}">首页</a>&nbsp;&gt;&nbsp;<a href="{% url 'app:solution' %}">解决方案</a>&nbsp;&gt;&nbsp;国际贸易
             </div>
         </div>
     </div>
@@ -148,7 +143,7 @@
                 </p>
                 <p>
                     <span style="font-size:16px;color:#000000;"><strong>更多应用案例，请参考公司</strong></span><span
-                        style="font-size:16px;"><a href="../../html/产品系列/研究报告.html" target="_blank"><strong><span
+                        style="font-size:16px;"><a href="{% url 'app:research_report' %}" target="_blank"><strong><span
                         style="color:#337FE5;font-size:16px;">研究报告</span></strong></a><strong><span
                         style="color:#000000;font-size:16px;">。</span></strong></span>
                 </p>
