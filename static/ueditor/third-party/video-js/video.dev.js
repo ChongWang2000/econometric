@@ -2044,7 +2044,7 @@ vjs.Component.prototype.dimensions = function(width, height){
 vjs.Component.prototype.dimension = function(widthOrHeight, num, skipListeners){
   if (num !== undefined) {
 
-    // Check if using css width/height (% or px) and adjust
+    // Check if using css_manage width/height (% or px) and adjust
     if ((''+num).indexOf('%') !== -1 || (''+num).indexOf('px') !== -1) {
       this.el_.style[widthOrHeight] = num;
     } else if (num === 'auto') {

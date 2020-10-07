@@ -4131,7 +4131,7 @@ SVGRenderer.prototype = {
 				fontSize: defaultChartStyle.fontSize
 			});
 
-		// Use the HTML specific .css method
+		// Use the HTML specific .css_manage method
 		wrapper.css = wrapper.htmlCss;
 
 		// This is specific for HTML within SVG
@@ -4792,7 +4792,7 @@ Highcharts.VMLElement = VMLElement = {
 						elemStyle[key] = value;
 						skipAttr = true;
 
-					// directly mapped to css
+					// directly mapped to css_manage
 					} else if (key === 'zIndex') {
 
 						if (value) {
@@ -4867,7 +4867,7 @@ Highcharts.VMLElement = VMLElement = {
 
 					// opacity: don't bother - animation is too slow and filters introduce artifacts
 					} else if (key === 'opacity') {
-						/*css(element, {
+						/*css_manage(element, {
 							opacity: value
 						});*/
 						skipAttr = true;

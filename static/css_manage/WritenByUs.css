@@ -1,5 +1,5 @@
 .secondaryMenu ul a:hover{
-     display: block;
+    display: block;
 }
 .secondaryMenu ul ul{
     display: none;
@@ -31,12 +31,12 @@
 }
 
 .jumbotronMain{
-	padding-top:30px;
-	padding-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
     margin-bottom:0px;
-	color:inherit;
+    color:inherit;
     background-color:rgb(6, 6, 8);
-    background-image:url(../images/body1_1.jpg);
+    background-image:url(../../templates/管理端/images/body1_1.jpg);
     background-position: center right;
     background-size:auto 100%;
     background-repeat:no-repeat;
@@ -48,18 +48,11 @@
     position: relative;
 }
 
-.mainText_center{
-    display: inline-block;
-    margin: auto;
-    position: relative;
-    min-width: 800px;
-}
-
 .jumbotronIntroduce{
-	padding-top:30px;
-	padding-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
     margin-bottom:0px;
-	color:inherit;
+    color:inherit;
     background-image :-webkit-linear-gradient(top,rgb(6, 6, 8),rgb(28, 9, 63));
 }
 
@@ -71,33 +64,29 @@
 }
 
 .jumbotronPrice{
-	padding-top:30px;
-	padding-bottom:30px;
+    padding-top:30px;
+    padding-bottom:30px;
     margin-bottom:0px;
-	color:inherit;
-    background-image :-webkit-linear-gradient(top,rgb(28, 9, 63),rgb(6, 6, 8));    
+    color:inherit;
+    background-image :-webkit-linear-gradient(top,rgb(28, 9, 63),rgb(6, 6, 8));
 }
 
 .thumbnailPrice{
-	display:block;
-	padding:4px;
-	margin-bottom:20px;
-	line-height:1.42857143;
-    background-image :-webkit-linear-gradient(top,rgb(71, 68, 77),rgb(6, 6, 8)); 
-	border:1px solid black;
-	border-radius:4px;
-	-webkit-transition:border .2s ease-in-out;
-	-o-transition:border .2s ease-in-out;
-	transition:border .2s ease-in-out
+    display:block;
+    padding:4px;
+    margin-bottom:20px;
+    line-height:1.42857143;
+    background-image :-webkit-linear-gradient(top,rgb(71, 68, 77),rgb(6, 6, 8));
+    border:1px solid black;
+    border-radius:4px;
+    -webkit-transition:border .2s ease-in-out;
+    -o-transition:border .2s ease-in-out;
+    transition:border .2s ease-in-out
 
 }
 
-.jumbotronIntroduce p, 
+.jumbotronIntroduce p,
 .jumbotronPrice h3, .jumbotronPrice p,
 .jumbotronMain h1, .jumbotronMain p{
     color: rgb(219, 223, 255);
-}
-
-.masterInput_form{
-    width:1000px;
 }

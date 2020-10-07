@@ -341,7 +341,7 @@ UE.parse.register('insertcode',function(utils){
             var jsurl,cssurl;
             if(this.rootPath !== undefined){
                 jsurl = utils.removeLastbs(this.rootPath)  + '/third-party/SyntaxHighlighter/shCore.js';
-                cssurl = utils.removeLastbs(this.rootPath) + '/third-party/SyntaxHighlighter/shCoreDefault.css';
+                cssurl = utils.removeLastbs(this.rootPath) + '/third-party/SyntaxHighlighter/shCoreDefault.css_manage';
             }else{
                 jsurl = this.highlightJsUrl;
                 cssurl = this.highlightCssUrl;
@@ -350,7 +350,7 @@ UE.parse.register('insertcode',function(utils){
                 id : "syntaxhighlighter_css",
                 tag : "link",
                 rel : "stylesheet",
-                type : "text/css",
+                type : "text/css_manage",
                 href : cssurl
             });
             utils.loadFile(document,{
@@ -992,7 +992,7 @@ UE.parse.register('vedio',function(utils){
     if(video.length || audio.length){
         var sourcePath = utils.removeLastbs(this.rootPath),
             jsurl = sourcePath + '/third-party/video-js/video.js',
-            cssurl = sourcePath + '/third-party/video-js/video-js.min.css',
+            cssurl = sourcePath + '/third-party/video-js/video-js.min.css_manage',
             swfUrl = sourcePath + '/third-party/video-js/video-js.swf';
 
         if(window.videojs) {
@@ -1002,7 +1002,7 @@ UE.parse.register('vedio',function(utils){
                 id : "video_css",
                 tag : "link",
                 rel : "stylesheet",
-                type : "text/css",
+                type : "text/css_manage",
                 href : cssurl
             });
             utils.loadFile(document,{

@@ -31,9 +31,9 @@
         }, 0 )
     };
     utils.loadFile(document,{
-        href:editor.options.themePath + editor.options.theme + "/dialogbase.css?cache="+Math.random(),
+        href:editor.options.themePath + editor.options.theme + "/dialogbase.css_manage?cache="+Math.random(),
         tag:"link",
-        type:"text/css",
+        type:"text/css_manage",
         rel:"stylesheet"
     });
     lang = editor.getLang(dialog.className.split( "-" )[2]);

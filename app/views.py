@@ -1,7 +1,13 @@
-from django.http import  HttpResponse
-from django.shortcuts import render
+from django.contrib.auth.hashers import make_password, check_password
+from django.http import HttpResponse, JsonResponse
+from django.shortcuts import render, redirect
 
 # Create your views here.
+from django.urls import reverse
+
+from app.models import User
+
+
 def index(request):
 
     return render(request, 'index/首页.html')
@@ -145,3 +151,110 @@ def ziliao(request):
 
 def ruanjian(request):
     return render(request, 'html/产品系列/软件.html')
+
+
+def registerinfo(request):
+    return render(request, '管理端/平台管理/1.1个人注册信息.html')
+
+
+def zhangmu(request):
+    return render(request, '管理端/平台管理/2.1总账目查询.html')
+
+
+def algorithm(request):
+    return render(request, '管理端/平台管理/3.算法管理.html')
+
+
+def userinfo(request):
+    return render(request, '管理端/平台管理/4.1个人信息管理.html')
+
+
+def algorithmusage(request):
+    return render(request, '管理端/平台管理/5.1使用概况.html')
+
+
+def price(request):
+    return render(request, '管理端/平台管理/6.价格管理.html')
+
+def register(request):
+
+    if request.method=='GET':
+        return render(request,'用户端/个人注册.html')
+    elif request.method=="POST":
+
+        username=request.POST.get("username")
+        password=request.POST.get("password")
+        field=request.POST.get("field")
+        name=request.POST.get("name")
+        org=request.POST.get("org")
+        email=request.POST.get("email")
+        password = make_password(password)
+
+        user=User()
+        user.userAccount=username
+        user.userPasswd=password
+        user.userField=field
+        user.userName=name
+        user.userOrganization=org
+        user.userEmail=email
+
+        user.save()
+
+        return redirect(reverse('app:login'))
+
+def login(request):
+    if request.method == "GET":
+        # error_message = request.session.get('error_message')
+        data = {
+            "title": "登录"
+        }
+        # if error_message:
+        #     del request.session['error_message']
+        #     data['error_message'] = error_message
+        return render(request, '用户端/登录.html', context=data)
+
+    elif request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+        users = User.objects.filter(userAccount=username)
+        if users.exists():
+            user = users.first()
+            if check_password(password, user.userPasswd):
+                    request.session['user_id'] = user.id
+                    return redirect(reverse('app:index'))
+            else:
+                print('密码错误')
+                # request.session['error_message'] = 'password error'
+                return redirect(reverse('app:login'))
+        print('用户不存在')
+        # request.session['error_message'] = 'user does not exist'
+        return redirect(reverse('app:login'))
+
+
+
+def checkuser(request):
+    username = request.GET.get("username")
+    users = User.objects.filter(userAccount=username)
+    data = {
+        "status": 200,
+        "msg": 'user can use'
+    }
+    if users.exists():
+        data['status'] = 901
+        data['msg'] = 'user already exist'
+    else:
+        pass
+    return JsonResponse(data=data)
+
+
+
+
+def a(request):
+    return render(request, '用户端/new.html')
+
+
+def register2(request):
+    if request.method == 'GET':
+        return render(request, '用户端/团队注册.html')
+    else:
+        return render(request, '用户端/团队注册.html')

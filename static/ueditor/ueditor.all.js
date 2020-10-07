@@ -3347,7 +3347,7 @@ var domUtils = dom.domUtils = {
      * @return { String } 获取到的样式值
      * @example
      * ```html
-     * <style type="text/css">
+     * <style type="text/css_manage">
      *      #test {
      *          font-size: 15px;
      *      }
@@ -6915,7 +6915,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
 
                 var html = ( ie && browser.version < 9  ? '' : '<!DOCTYPE html>') +
                     '<html xmlns=\'http://www.w3.org/1999/xhtml\' class=\'view\' ><head>' +
-                    '<style type=\'text/css\'>' +
+                    '<style type=\'text/css_manage\'>' +
                     //设置四周的留边
                     '.view{padding:0;word-wrap:break-word;cursor:text;height:90%;}\n' +
                     //设置默认字体和字号
@@ -6923,7 +6923,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
                     'body{margin:8px;font-family:sans-serif;font-size:16px;}' +
                     //设置段落间距
                     'p{margin:5px 0;}</style>' +
-                    ( options.iframeCssUrl ? '<link rel=\'stylesheet\' type=\'text/css\' href=\'' + utils.unhtml(options.iframeCssUrl) + '\'/>' : '' ) +
+                    ( options.iframeCssUrl ? '<link rel=\'stylesheet\' type=\'text/css_manage\' href=\'' + utils.unhtml(options.iframeCssUrl) + '\'/>' : '' ) +
                     (options.initialStyle ? '<style>' + options.initialStyle + '</style>' : '') +
                     '</head><body class=\'view\' ></body>' +
                     '<script type=\'text/javascript\' ' + (ie ? 'defer=\'defer\'' : '' ) +' id=\'_initialScript\'>' +
@@ -7260,7 +7260,7 @@ var fillCharReg = new RegExp(domUtils.fillChar, 'g');
             if (browser.ie && browser.version > 8) {
                 var headHtmlForIE9 = '';
                 utils.each(me.document.styleSheets, function (si) {
-                    headHtmlForIE9 += ( si.href ? '<link rel="stylesheet" type="text/css" href="' + si.href + '" />' : '<style>' + si.cssText + '</style>');
+                    headHtmlForIE9 += ( si.href ? '<link rel="stylesheet" type="text/css_manage" href="' + si.href + '" />' : '<style>' + si.cssText + '</style>');
                 });
                 utils.each(me.document.getElementsByTagName('script'), function (si) {
                     headHtmlForIE9 += si.outerHTML;
@@ -8047,7 +8047,7 @@ UE.Editor.defaultOptions = function(editor){
         initialContent: '',
         initialStyle:'',
         autoClearinitialContent: false,
-        iframeCssUrl: _url + 'themes/iframe.css',
+        iframeCssUrl: _url + 'themes/iframe.css_manage',
         textarea: 'editorValue',
         focus: false,
         focusInEnd: true,
@@ -10869,7 +10869,7 @@ UE.plugin.register('background', function () {
                 } else {
                     url = su != "none" ? su.replace(/url\("?|"?\)/ig, "") : "";
                 }
-                var html = '<style type="text/css">body{';
+                var html = '<style type="text/css_manage">body{';
                 var bgObj = {
                     "background-color": domUtils.getComputedStyle(body, "background-color") || "#ffffff",
                     'background-image': url ? 'url(' + url + ')' : '',
@@ -16465,8 +16465,8 @@ UE.plugins['list'] = function () {
                 utils.loadFile(document,{
                     tag : "link",
                     rel : "stylesheet",
-                    type : "text/css",
-                    href : opt.codeMirrorCssUrl || opt.UEDITOR_HOME_URL + "third-party/codemirror/codemirror.css"
+                    type : "text/css_manage",
+                    href : opt.codeMirrorCssUrl || opt.UEDITOR_HOME_URL + "third-party/codemirror/codemirror.css_manage"
                 });
 
             });
@@ -29333,9 +29333,9 @@ UE.ui = baidu.editor.ui = {};
         var editor = new UE.Editor(options);
         editor.options.editor = editor;
         utils.loadFile(document, {
-            href:editor.options.themePath + editor.options.theme + "/css/ueditor.css",
+            href:editor.options.themePath + editor.options.theme + "/css_manage/ueditor.css_manage",
             tag:"link",
-            type:"text/css",
+            type:"text/css_manage",
             rel:"stylesheet"
         });
 

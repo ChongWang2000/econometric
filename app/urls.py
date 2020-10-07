@@ -59,4 +59,24 @@ urlpatterns = [
     #联系我们
     url(r'^contactus/', views.contactus, name='contactus'),
 
+
+
+
+
+    url(r'^registerinfo/', views.registerinfo, name='registerinfo'),
+    url(r'^zhangmu/', views.zhangmu, name='zhangmu'),
+    url(r'^algorithm/', views.algorithm, name='algorithm'),
+    url(r'^userinfo/', views.userinfo, name='userinfo'),
+    url(r'^algorithmusage/', views.algorithmusage, name='algorithmusage'),
+    url(r'^price/', views.price, name='price'),
+
+
+
+    url(r'^register/', views.register, name='register'),
+    url(r'^register2/', views.register2, name='register2'),
+    url(r'^login/', views.login, name='login'),
+    url(r'^checkuser/', views.checkuser, name='checkuser'),
+    url(r'^a/', views.a, name='a'),
+
+
 ]
