@@ -3,7 +3,7 @@
 
 {% block ext_css %}
     {{ block.super }}
-
+    <link href="{% static 'css/head.css' %}" type="text/css" rel="stylesheet"/>
 {% endblock %}
 
 
@@ -11,43 +11,45 @@
     {{ block.super }}
 
 {% endblock %}
-<style>
-    .pop_win {
-        position: fixed;
-        opacity: 0;
-        top: 7%;
-        left: 7%;
-        width: 86%;
-        height: 86%;
-        padding: 10px;
-        border: 2px solid rebeccapurple;
-        background-color: white;
-        z-index: -1;
-    }
 
-    .folder:hover {
-        color: green;
-    }
-
-    .a_style {
-        text-decoration: none;
-        color: black;
-    }
-
-    .a_style:hover {
-        color: green;
-    }
-
-    .a_style:visited {
-        color: black;
-    }
-</style>
 
 {% block content %}
 
+    <style>
+        .pop_win {
+            display: none;
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 80%;
+            height: 80%;
+            border: 16px solid lightblue;
+            background-color: white;
+            z-index: 1002;
+            overflow: auto;
+        }
+
+        .folder:hover {
+            color: green;
+        }
+
+        .a_style {
+            text-decoration: none;
+            color: black;
+        }
+
+        .a_style:hover {
+            color: green;
+        }
+
+        .a_style:visited {
+            color: black;
+        }
+    </style>
     <body style="scrollbar-arrow-color:yellow;scrollbar-base-color:lightsalmon">
 
-     <div class="navigation_bars" style="z-index:1">
+
+    <div class="navigation_bars" style="z-index:1">
         <img class="logo0" src="/static/images/logo0.jpg">
         <img class="logo" src="/static/images/logo.jpg">
         <div class="navigation_textbox"><!--导航栏-->
@@ -137,12 +139,36 @@
             <div class="text_field">
                 <span><a href="{% url 'app:contactus' %}">联系我们</a></span>
             </div>
-            <div class="btn_field">
-                <span><a href="{% url 'app:login' %}">注册</a></span>
-            </div>
-            <div class="btn_field">
-                <span><a href="{% url 'app:login' %}">登录</a></span>
-            </div>
+
+            {% if is_login %}
+                {% if is_personal %}
+                    <div class="btn_field">
+                        <span><a href="{% url 'app:personcenter' %}">个人中心</a></span>
+                    </div>
+
+                    <div class="btn_field">
+                        <span><a href="{% url 'app:logout' %}">退出</a></span>
+                    </div>
+                {% endif %}
+
+                {% if is_team %}
+                    <div class="btn_field">
+                        <span><a href="{% url 'app:personcenter2' %}">团队中心</a></span>
+                    </div>
+
+                    <div class="btn_field">
+                        <span><a href="{% url 'app:logout' %}">退出</a></span>
+                    </div>
+                {% endif %}
+
+            {% else %}
+                <div class="btn_field">
+                    <span><a href="{% url 'app:login' %}">注册</a></span>
+                </div>
+                <div class="btn_field">
+                    <span><a href="{% url 'app:login' %}">登录</a></span>
+                </div>
+            {% endif %}
         </div>
     </div>
 
@@ -1938,7 +1964,7 @@
 
 
     <div>
-        <div id="win1" class="pop_win">
+        <div id="win1" class="pop_win" style="display: none">
             <a href="javascript:void(0)" onclick="closeWin('win1');" style="float: right;">关闭</a>
             <h6 class="margin-vertical-rem">原始数据</h6>
             <div id="chart-trends1_1" class="border"></div>
@@ -1950,7 +1976,7 @@
             </div>
         </div>
 
-        <div id="win2" class="pop_win">
+        <div id="win2" class="pop_win" style="display: none ">
             <a href="javascript:void(0)" onclick="closeWin('win2');" style="float: right;">关闭</a>
             <h6 class="margin-vertical-rem">原始数据</h6>
             <div id="chart-trends2_1" class="border"></div>
@@ -1962,7 +1988,7 @@
             </div>
         </div>
 
-        <div id="win3" class="pop_win">
+        <div id="win3" class="pop_win" style="display: none ">
             <a href="javascript:void(0)" onclick="closeWin('win3');" style="float: right;">关闭</a>
             <h6 class="margin-vertical-rem">原始数据</h6>
             <div id="chart-trends3_1" class="border"></div>
@@ -1974,7 +2000,7 @@
             </div>
         </div>
 
-        <div id="win4" class="pop_win">
+        <div id="win4" class="pop_win" style="display: none">
             <a href="javascript:void(0)" onclick="closeWin('win4');" style="float: right;">关闭</a>
             <h6 class="margin-vertical-rem">原始数据</h6>
             <div id="chart-trends4_1" class="border"></div>
@@ -1986,15 +2012,14 @@
             </div>
         </div>
 
-        <div id="win5" class="pop_win">
+        <div id="win5" class="pop_win" style="display: none">
             <a href="javascript:void(0)" onclick="closeWin('win5');" style="float: right;">关闭</a>
             <br/><br/>
             <h3 class="margin-vertical-rem">数据</h3>
         </div>
     </div>
 
-
-    <script src="{% static 'js/3.0_function/frappe-charts.min.js' %}"></script>
+    <script src="https://unpkg.com/frappe-charts@1.0.0/dist/frappe-charts.min.iife.js"></script>
 
     <script>
 
@@ -2501,13 +2526,11 @@
         }
 
         function popWin(id) {
-            document.getElementById(id).style.opacity = '1';
-            document.getElementById(id).style.zIndex = '9999';
+            document.getElementById(id).style.display = 'block';
         }
 
         function closeWin(id) {
-            document.getElementById(id).style.opacity = '0';
-            document.getElementById(id).style.zIndex = '-1';
+            document.getElementById(id).style.display = 'none';
         }
 
     </script>

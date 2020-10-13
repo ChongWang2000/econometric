@@ -75,8 +75,16 @@ urlpatterns = [
     url(r'^register/', views.register, name='register'),
     url(r'^register2/', views.register2, name='register2'),
     url(r'^login/', views.login, name='login'),
+    url(r'^logout/', views.logout, name='logout'),
     url(r'^checkuser/', views.checkuser, name='checkuser'),
-    url(r'^a/', views.a, name='a'),
+    url(r'^checkmanager/', views.checkmanager, name='checkmanager'),
+    url(r'^personcenter/', views.personcenter, name='personcenter'),
+    url(r'^personcenter2/', views.personcenter2, name='personcenter2'),
+
+
+    url(r'^algorithmcall/', views.algorithmcall, name='algorithmcall'),
+
+
 
 
 ]

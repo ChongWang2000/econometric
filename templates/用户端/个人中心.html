@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+    <title></title>
+    <link href="{% static 'css/head.css' %}" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'css/bootstrap/css/bootstrap-grid.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap/css/colors/blue.css' %}" id="theme" rel="stylesheet">
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+</head>
+
+<body class="fix-header card-no-border">
+
+<div class="navigation_bars" style="z-index:1">
+
+    <img class="logo0" src="/static/images/logo0.jpg">
+    <img class="logo" src="/static/images/logo.jpg">
+    <div class="navigation_textbox"><!--导航栏-->
+        <div class="text_field">
+            <a href="{% url 'app:index' %}">首页</a>
+        </div>
+        <div class="text_field">
+            <span><a href="{% url 'app:aboutus' %}">关于我们</a></span>
+            <div class="menu">
+                <a href="{% url 'app:aboutus' %}">
+                    <div style="text-align: center">企业文化</div>
+                </a>
+                <a href="{% url 'app:serviceobject' %}">
+                    <div style="text-align: center">服务对象</div>
+                </a>
+                <a href="{% url 'app:companyculture' %}">
+                    <div style="text-align: center">公司文化</div>
+                </a>
+                <a href="{% url 'app:media' %}">
+                    <div style="text-align: center">媒体引用</div>
+                </a>
+            </div>
+        </div>
+        <div class="text_field">
+            <span><a href="{% url 'app:teammember' %}">团队成员</a></span>
+            <div class="menu">
+                <a href="{% url 'app:consultant_content' %}">
+                    <div style="text-align: center">荣誉顾问</div>
+                </a>
+                <a href="{% url 'app:business_team' %}">
+                    <div style="text-align: center">公司团队</div>
+                </a>
+            </div>
+        </div>
+        <div class="text_field">
+            <span><a href="{% url 'app:solution' %}">解决方案</a></span>
+            <div class="menu">
+                <a href="{% url 'app:trade' %}">
+                    <div style="text-align: center">贸易</div>
+                </a>
+                <a href="{% url 'app:env' %}">
+                    <div style="text-align: center">环境能源</div>
+                </a>
+                <a href="{% url 'app:source' %}">
+                    <div style="text-align: center">资源</div>
+                </a>
+                <a href="{% url 'app:agri' %}">
+                    <div style="text-align: center">农业</div>
+                </a>
+                <a href="{% url 'app:finance' %}">
+                    <div style="text-align: center">财政金融</div>
+                </a>
+                <a href="{% url 'app:poverty' %}">
+                    <div style="text-align: center">贫困</div>
+                </a>
+                <a href="{% url 'app:labor' %}">
+                    <div style="text-align: center">劳动力</div>
+                </a>
+                <a href="{% url 'app:disaster' %}">
+                    <div style="text-align: center">灾害评估</div>
+                </a>
+            </div>
+        </div>
+        <div class="text_field">
+            <span><a href="{% url 'app:produce' %}">产品系列</a></span>
+            <div class="menu">
+                <a href="{% url 'app:produce' %}">
+                    <div style="text-align: center">数据软件</div>
+                </a>
+                <a href="{% url 'app:simulation_platform' %}">
+                    <div style="text-align: center">仿真平台</div>
+                </a>
+                <a href="{% url 'app:training_courses' %}">
+                    <div style="text-align: center">培训课程</div>
+                </a>
+                <a href="{% url 'app:database' %}">
+                    <div style="text-align: center">资料库</div>
+                </a>
+                <a href="{% url 'app:research_report' %}">
+                    <div style="text-align: center">研究报告</div>
+                </a>
+            </div>
+        </div>
+        <div class="text_field">
+            <span><a href="{% url 'app:recruitment' %}">人才招聘</a></span>
+        </div>
+        <div class="text_field">
+            <span><a href="{% url 'app:contactus' %}">联系我们</a></span>
+        </div>
+         {% if is_login %}
+                <div class="btn_field">
+                    <span><a href="{% url 'app:personcenter' %}">个人中心</a></span>
+                </div>
+
+                <div class="btn_field">
+                    <span><a href="{% url 'app:logout' %}">退出</a></span>
+                </div>
+            {% else %}
+                <div class="btn_field">
+                    <span><a href="{% url 'app:login' %}">注册</a></span>
+                </div>
+                <div class="btn_field">
+                    <span><a href="{% url 'app:login' %}">登录</a></span>
+                </div>
+            {% endif %}
+
+    </div>
+</div>
+<div class="page-wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Column -->
+            <div class="col-lg-4 col-xlg-3 col-md-5">
+                <div class="card">
+                    <div class="card-block">
+                        <center class="m-t-30"><img src="{% static 'images/index_images/5.jpg' %}" class="img-circle"
+                                                    width="150"/>
+                            <h4 class="card-title m-t-10">{{ name }}</h4>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+            <!-- Column -->
+            <div class="col-lg-8 col-xlg-9 col-md-7">
+                <div class="card">
+                    <div class="card-block">
+                        <form class="form-horizontal form-material">
+                            <div class="form-group">
+                                <label class="col-md-12">Full Name</label>
+                                <div class="col-md-12">
+                                    <input type="text" value="{{ name }}" disabled="true"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="example-email" class="col-md-12">Email</label>
+                                <div class="col-md-12">
+                                    <input type="email" value="{{ email }}" disabled="true"
+                                           class="form-control form-control-line" name="example-email"
+                                           id="example-email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Field of Research</label>
+                                <div class="col-md-12">
+                                    <input type="text" value="{{ field }}" disabled="true"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Organization</label>
+                                <div class="col-md-12">
+                                    <input type="text" value="{{ organization }}" disabled="true"
+                                           class="form-control form-control-line">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Message</label>
+                                <div class="col-md-12">
+                                    <textarea rows="5" placeholder="please input something"
+                                              class="form-control form-control-line"></textarea>
+                                </div>
+                            </div>
+                            <a href="{% url 'app:algorithmcall' %}" class="btn btn-info btn-rounded waves-effect waves-light m-b-40">
+                                Algorithm call </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Column -->
+        </div>
+    </div>
+</div>
+
+{#    <script src="../assets/plugins/jquery/jquery.min.js"></script>#}
+<!-- Bootstrap tether Core JavaScript -->
+<script src="{% static 'css/bootstrap/js/tether.min.js' %}"></script>
+<script src="{% static 'css/bootstrap/js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>

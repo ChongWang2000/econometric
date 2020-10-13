@@ -24,40 +24,78 @@
             <div class="text_field">
                 <span><a href="{% url 'app:aboutus' %}">关于我们</a></span>
                 <div class="menu">
-                    <a href="{% url 'app:aboutus' %}" ><div style="text-align: center">企业文化</div></a>
-                    <a href="{% url 'app:serviceobject' %}"><div style="text-align: center">服务对象</div></a>
-                    <a href="{% url 'app:companyculture' %}"><div style="text-align: center">公司文化</div></a>
-                    <a href="{% url 'app:media' %}"><div style="text-align: center">媒体引用</div></a>
+                    <a href="{% url 'app:aboutus' %}">
+                        <div style="text-align: center">企业文化</div>
+                    </a>
+                    <a href="{% url 'app:serviceobject' %}">
+                        <div style="text-align: center">服务对象</div>
+                    </a>
+                    <a href="{% url 'app:companyculture' %}">
+                        <div style="text-align: center">公司文化</div>
+                    </a>
+                    <a href="{% url 'app:media' %}">
+                        <div style="text-align: center">媒体引用</div>
+                    </a>
                 </div>
             </div>
             <div class="text_field">
                 <span><a href="{% url 'app:teammember' %}">团队成员</a></span>
                 <div class="menu">
-                    <a href="{% url 'app:consultant_content' %}"><div style="text-align: center">荣誉顾问</div></a>
-                    <a href="{% url 'app:business_team' %}"><div style="text-align: center">公司团队</div></a>
+                    <a href="{% url 'app:consultant_content' %}">
+                        <div style="text-align: center">荣誉顾问</div>
+                    </a>
+                    <a href="{% url 'app:business_team' %}">
+                        <div style="text-align: center">公司团队</div>
+                    </a>
                 </div>
             </div>
             <div class="text_field">
                 <span><a href="{% url 'app:solution' %}">解决方案</a></span>
                 <div class="menu">
-                    <a href="{% url 'app:trade' %}"><div style="text-align: center">贸易</div></a>
-                    <a href="{% url 'app:env' %}"><div style="text-align: center">环境能源</div></a>
-                    <a href="{% url 'app:source' %}"><div style="text-align: center">资源</div></a>
-                    <a href="{% url 'app:agri' %}"><div style="text-align: center">农业</div></a>
-                    <a href="{% url 'app:finance' %}"><div style="text-align: center">财政金融</div></a>
-                    <a href="{% url 'app:poverty' %}"><div style="text-align: center">贫困</div></a>
-                    <a href="{% url 'app:labor' %}"><div style="text-align: center">劳动力</div></a>
-                    <a href="{% url 'app:disaster' %}"><div style="text-align: center">灾害评估</div></a>
+                    <a href="{% url 'app:trade' %}">
+                        <div style="text-align: center">贸易</div>
+                    </a>
+                    <a href="{% url 'app:env' %}">
+                        <div style="text-align: center">环境能源</div>
+                    </a>
+                    <a href="{% url 'app:source' %}">
+                        <div style="text-align: center">资源</div>
+                    </a>
+                    <a href="{% url 'app:agri' %}">
+                        <div style="text-align: center">农业</div>
+                    </a>
+                    <a href="{% url 'app:finance' %}">
+                        <div style="text-align: center">财政金融</div>
+                    </a>
+                    <a href="{% url 'app:poverty' %}">
+                        <div style="text-align: center">贫困</div>
+                    </a>
+                    <a href="{% url 'app:labor' %}">
+                        <div style="text-align: center">劳动力</div>
+                    </a>
+                    <a href="{% url 'app:disaster' %}">
+                        <div style="text-align: center">灾害评估</div>
+                    </a>
                 </div>
             </div>
             <div class="text_field">
                 <span><a href="{% url 'app:produce' %}">产品系列</a></span>
                 <div class="menu">
-                    <a href="{% url 'app:produce' %}"><div style="text-align: center">数据软件</div></a>
-                    <a href="{% url 'app:simulation_platform' %}"><div style="text-align: center">仿真平台</div></a>
-                    <a href="{% url 'app:training_courses' %}"><div style="text-align: center">培训课程</div></a>
-                    <a href="{% url 'app:database' %}"><div style="text-align: center">资料库</div></a>
-                    <a href="{% url 'app:research_report' %}"><div style="text-align: center">研究报告</div></a>
+                    <a href="{% url 'app:produce' %}">
+                        <div style="text-align: center">数据软件</div>
+                    </a>
+                    <a href="{% url 'app:simulation_platform' %}">
+                        <div style="text-align: center">仿真平台</div>
+                    </a>
+                    <a href="{% url 'app:training_courses' %}">
+                        <div style="text-align: center">培训课程</div>
+                    </a>
+                    <a href="{% url 'app:database' %}">
+                        <div style="text-align: center">资料库</div>
+                    </a>
+                    <a href="{% url 'app:research_report' %}">
+                        <div style="text-align: center">研究报告</div>
+                    </a>
                 </div>
             </div>
             <div class="text_field">
@@ -66,12 +104,34 @@
             <div class="text_field">
                 <span><a href="{% url 'app:contactus' %}">联系我们</a></span>
             </div>
-            <div class="btn_field">
-                <span><a href="{% url 'app:login' %}">注册</a></span>
-            </div>
-            <div class="btn_field">
-                <span><a href="{% url 'app:login' %}">登录</a></span>
-            </div>
+            {% if is_login %}
+                {% if is_personal %}
+                    <div class="btn_field">
+                        <span><a href="{% url 'app:personcenter' %}">个人中心</a></span>
+                    </div>
+
+                    <div class="btn_field">
+                        <span><a href="{% url 'app:logout' %}">退出</a></span>
+                    </div>
+                {% endif %}
+
+                {% if is_team %}
+                    <div class="btn_field">
+                        <span><a href="{% url 'app:personcenter2' %}">团队中心</a></span>
+                    </div>
+
+                    <div class="btn_field">
+                        <span><a href="{% url 'app:logout' %}">退出</a></span>
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="btn_field">
+                    <span><a href="{% url 'app:login' %}">注册</a></span>
+                </div>
+                <div class="btn_field">
+                    <span><a href="{% url 'app:login' %}">登录</a></span>
+                </div>
+            {% endif %}
         </div>
     </div>
 {% endblock %}
