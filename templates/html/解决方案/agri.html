@@ -110,7 +110,7 @@
                     <br>
                 </p>
                 <p class="MsoNormal" style="margin-left:0cm;">
-                    <span style="font-size:16px;color:#666666;">&nbsp;</span><img alt="" src="{% static 'images/img-29.png' %}">
+                    <span style="font-size:16px;color:#666666;">&nbsp;</span><img alt="" src="{{ argi_img1.img }}">
                 </p>
                 <p class="MsoNormal" style="text-align:center;margin-left:0cm;">
                     <span style="font-size:16px;color:#666666;">图一：全球数据库中谷物部门数据检查</span>
@@ -132,7 +132,7 @@
                     <span style="font-size:16px;color:#666666;">在全球模型数据库中，农业部门有14类，合并程度较高；而在中国CGE模型中，农业部门只有5类，部门活动非常概况。针对不同的研究区域，其主要农业研究对象，在数据库中并非以单独部门呈现，因此需要将生产活动进行细化。在全球数据库细化中，可以借鉴Mark Horridge教授编写的SplitCOM程序，将部门的生产活动进行拆分。比如将玉米从谷物（GRO）拆分出来，将大豆从油料作物（OIL）中拆分出来。然而，在构建国家CGE模型时，则需要对投入产出表进行预处理，或者熟悉相应的数据处理软件，如GEMPACK的TABLO语言、R、Python等对已经构建的数据库进行拆分。</span>
                 </p>
                 <p class="MsoNormal" style="text-align:center;margin-left:0cm;">
-                    <span style="font-size:16px;color:#666666;">&nbsp;</span><img alt="" src="{% static 'images/img-30.png' %}">
+                    <span style="font-size:16px;color:#666666;">&nbsp;</span><img alt="" src="{{ argi_img2.img }}">
                 </p>
                 <p class="MsoNormal" style="text-align:center;margin-left:0cm;">
                     <span style="font-size:16px;color:#666666;">图二：玉米贸易矩阵的细化</span>
@@ -152,7 +152,7 @@
                     <span style="font-size:16px;color:#666666;">全球模型提供了一个标准的CGE模型范式，但是针对于特殊的研究问题，需要在此基础是进行模块的添加或调整，以适用于研究对象的经济活动模型。在农业领域，经常会涉及到种植结构、农业补贴政策、农产品贸易以及库存等相关问题。因此全球模型或者国家模型在实际运用过程当中，还需要添加或修改各个模块，来模型相应的农业经济活动。</span>
                 </p>
                 <p align="center" class="MsoNormal" style="margin-left:0cm;text-align:center;">
-                    <img alt="" src="{% static 'images/img-31.png' %}">
+                    <img alt="" src="{{argi_img3.img}}">
                 </p>
                 <p align="center" class="MsoNormal" style="margin-left:0cm;text-align:center;">
                     <span style="font-size:16px;color:#666666;">图三：库存机制的构建</span>

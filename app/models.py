@@ -41,3 +41,40 @@ class Team(models.Model):
     managerPhone  =models.CharField(max_length=20,default="")
     # 负责人隶属组织
     managerOrganization = models.CharField(max_length=50,default="")
+
+class solution_img(models.Model):
+    img = models.CharField(max_length=255)
+
+class agri_img(models.Model):
+    img = models.CharField(max_length=255)
+
+class simulation_platform_img(models.Model):
+    img = models.CharField(max_length=255)
+
+class training_courses_img(models.Model):
+    img = models.CharField(max_length=255)
+
+class database_img(models.Model):
+    img = models.CharField(max_length=255)
+
+class teammember_img(models.Model):
+    img = models.CharField(max_length=255)
+
+class consultant_content_img(models.Model):
+    img = models.CharField(max_length=255)
+
+class index_img(models.Model):
+    img = models.CharField(max_length=255)
+
+class serviceobject_img(models.Model):
+    img = models.CharField(max_length=255)
+
+# produce
+class produce_img(models.Model):
+    img = models.CharField(max_length=255)
+
+
+
+
+
+

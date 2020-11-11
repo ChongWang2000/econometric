@@ -5,13 +5,47 @@ from django.shortcuts import render, redirect
 # Create your views here.
 from django.urls import reverse
 
-from app.models import User, Team
+from app.models import User, Team, agri_img, consultant_content_img, database_img, index_img, serviceobject_img, \
+    simulation_platform_img, solution_img, teammember_img, training_courses_img, produce_img
 
 
 def index(request):
+    index_img1 = index_img.objects.filter(id=1).first
+    index_img2 = index_img.objects.filter(id=2).first
+    index_img3 = index_img.objects.filter(id=3).first
+    index_img4 = index_img.objects.filter(id=4).first
+    index_img5 = index_img.objects.filter(id=5).first
+    index_img6 = index_img.objects.filter(id=6).first
+    index_img7 = index_img.objects.filter(id=7).first
+    index_img8 = index_img.objects.filter(id=8).first
+    index_img9 = index_img.objects.filter(id=9).first
+    index_img10 = index_img.objects.filter(id=10).first
+    index_img11 = index_img.objects.filter(id=11).first
+    index_img12 = index_img.objects.filter(id=12).first
+    index_img13 = index_img.objects.filter(id=13).first
+    index_img14 = index_img.objects.filter(id=14).first
+    index_img15 = index_img.objects.filter(id=15).first
+    index_img16 = index_img.objects.filter(id=16).first
+
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'index_img1':index_img1,
+        'index_img2':index_img2,
+        'index_img3':index_img3,
+        'index_img4':index_img4,
+        'index_img5':index_img5,
+        'index_img6':index_img6,
+        'index_img7':index_img7,
+        'index_img8':index_img8,
+        'index_img9':index_img9,
+        'index_img10':index_img10,
+        'index_img11':index_img11,
+        'index_img12':index_img12,
+        'index_img13':index_img13,
+        'index_img14':index_img14,
+        'index_img15':index_img15,
+        'index_img16':index_img16,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -28,9 +62,25 @@ def index(request):
 
 
 def produce(request):
+
+    produce_img1 = produce_img.objects.filter(id=1).first
+    produce_img2 = produce_img.objects.filter(id=2).first
+    produce_img3 = produce_img.objects.filter(id=3).first
+    produce_img4 = produce_img.objects.filter(id=4).first
+    produce_img5 = produce_img.objects.filter(id=5).first
+    produce_img6 = produce_img.objects.filter(id=6).first
+    produce_img7 = produce_img.objects.filter(id=7).first
+
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'produce_img1':produce_img1,
+        'produce_img2':produce_img2,
+        'produce_img3':produce_img3,
+        'produce_img4':produce_img4,
+        'produce_img5':produce_img5,
+        'produce_img6':produce_img6,
+        'produce_img7':produce_img7,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -66,9 +116,11 @@ def recruitment(request):
 
 
 def teammember(request):
+    teammember_img1 = teammember_img.objects.filter(id=1).first
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'teammember_img1':teammember_img1,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -123,9 +175,26 @@ def contactus(request):
 
 
 def solution(request):
+    solution_img1 = solution_img.objects.filter(id=1).first
+    solution_img2 = solution_img.objects.filter(id=2).first
+    solution_img3 = solution_img.objects.filter(id=3).first
+    solution_img4 = solution_img.objects.filter(id=4).first
+    solution_img5 = solution_img.objects.filter(id=5).first
+    solution_img6 = solution_img.objects.filter(id=6).first
+    solution_img7 = solution_img.objects.filter(id=7).first
+    solution_img8 = solution_img.objects.filter(id=8).first
+
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'solution_img1':solution_img1,
+        'solution_img2':solution_img2,
+        'solution_img3':solution_img3,
+        'solution_img4':solution_img4,
+        'solution_img5':solution_img5,
+        'solution_img6':solution_img6,
+        'solution_img7':solution_img7,
+        'solution_img8':solution_img8,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -140,9 +209,18 @@ def solution(request):
     return render(request, 'index/解决方案.html',data)
 
 def agri(request):
+
+    argi_img1=agri_img.objects.filter(id=1).first()
+    argi_img2=agri_img.objects.filter(id=2).first()
+    argi_img3=agri_img.objects.filter(id=3).first()
+
+
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        "argi_img1": argi_img1,
+        "argi_img2": argi_img2,
+        "argi_img3": argi_img3,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -311,9 +389,14 @@ def business_team(request):
 
 
 def consultant_content(request):
+    consultant_content_img1=consultant_content_img.objects.filter(id=1).first()
+
+
+
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'consultant_content_img1':consultant_content_img1,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -368,9 +451,39 @@ def media(request):
 
 
 def serviceobject(request):
+
+    serviceobject_img1 = serviceobject_img.objects.filter(id=1).first
+    serviceobject_img2 = serviceobject_img.objects.filter(id=2).first
+    serviceobject_img3 = serviceobject_img.objects.filter(id=3).first
+    serviceobject_img4 = serviceobject_img.objects.filter(id=4).first
+    serviceobject_img5 = serviceobject_img.objects.filter(id=5).first
+    serviceobject_img6 = serviceobject_img.objects.filter(id=6).first
+    serviceobject_img7 = serviceobject_img.objects.filter(id=7).first
+    serviceobject_img8 = serviceobject_img.objects.filter(id=8).first
+    serviceobject_img9 = serviceobject_img.objects.filter(id=9).first
+    serviceobject_img10 = serviceobject_img.objects.filter(id=10).first
+    serviceobject_img11 = serviceobject_img.objects.filter(id=11).first
+    serviceobject_img12 = serviceobject_img.objects.filter(id=12).first
+    serviceobject_img13 = serviceobject_img.objects.filter(id=13).first
+    serviceobject_img14 = serviceobject_img.objects.filter(id=14).first
+
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'serviceobject_img1':serviceobject_img1,
+        'serviceobject_img2':serviceobject_img2,
+        'serviceobject_img3':serviceobject_img3,
+        'serviceobject_img4':serviceobject_img4,
+        'serviceobject_img5':serviceobject_img5,
+        'serviceobject_img6':serviceobject_img6,
+        'serviceobject_img7':serviceobject_img7,
+        'serviceobject_img8':serviceobject_img8,
+        'serviceobject_img9':serviceobject_img9,
+        'serviceobject_img10':serviceobject_img10,
+        'serviceobject_img11':serviceobject_img11,
+        'serviceobject_img12':serviceobject_img12,
+        'serviceobject_img13':serviceobject_img13,
+        'serviceobject_img14':serviceobject_img14,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -387,9 +500,14 @@ def serviceobject(request):
 
 
 def simulation_platform(request):
+    simulation_platform_img1 = simulation_platform_img.objects.filter(id=1).first
+    simulation_platform_img2 = simulation_platform_img.objects.filter(id=2).first
+
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'simulation_platform_img1':simulation_platform_img1,
+        'simulation_platform_img2':simulation_platform_img2,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -406,9 +524,20 @@ def simulation_platform(request):
 
 
 def training_courses(request):
+
+    training_courses_img1 = training_courses_img.objects.filter(id=1).first
+    training_courses_img2 = training_courses_img.objects.filter(id=2).first
+    training_courses_img3 = training_courses_img.objects.filter(id=3).first
+    training_courses_img4 = training_courses_img.objects.filter(id=4).first
+    training_courses_img5 = training_courses_img.objects.filter(id=5).first
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'training_courses_img1':training_courses_img1,
+        'training_courses_img2':training_courses_img2,
+        'training_courses_img3':training_courses_img3,
+        'training_courses_img4':training_courses_img4,
+        'training_courses_img5':training_courses_img5,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -425,9 +554,20 @@ def training_courses(request):
 
 
 def database(request):
+    database_img1=database_img.objects.filter(id=1).first()
+    database_img2=database_img.objects.filter(id=2).first()
+    database_img3=database_img.objects.filter(id=3).first()
+    database_img4=database_img.objects.filter(id=4).first()
+    database_img5=database_img.objects.filter(id=5).first()
+
     user_id = request.session.get('user_id')
     team_id = request.session.get('team_id')
     data = {
+        'database_img1':database_img1,
+        'database_img2':database_img2,
+        'database_img3':database_img3,
+        'database_img4':database_img4,
+        'database_img5':database_img5,
         'is_login': False,
         'is_personal': False,
         'is_team': False,
@@ -800,6 +940,10 @@ def login(request):
                     print('密码错误')
                     # request.session['error_message'] = 'password error'
                     return redirect(reverse('app:login'))
+            else:
+                print('用户不存在')
+                # request.session['error_message'] = 'user does not exist'
+                return redirect(reverse('app:login'))
         elif check_box_list[0]=='团队用户' :
             username = request.POST.get("username")
             password = request.POST.get("password")
@@ -813,6 +957,10 @@ def login(request):
                     print('密码错误')
                     # request.session['error_message'] = 'password error'
                     return redirect(reverse('app:login'))
+            else:
+                print('用户不存在')
+                # request.session['error_message'] = 'user does not exist'
+                return redirect(reverse('app:login'))
         else:
             print('用户不存在')
             # request.session['error_message'] = 'user does not exist'

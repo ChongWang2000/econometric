@@ -84,7 +84,7 @@
           <div class="child left">
             <p class="childTitle"><a href="{% url 'app:trade' %}">国际贸易</a></p>
             <div class="childImg">
-              <a href="{% url 'app:trade' %}"><img src="{% static 'images/img-2.png' %}"></a>
+              <a href="{% url 'app:trade' %}"><img src="{{solution_img1.img}}"></a>
             </div>
             <div class="childInfo">
               <p>国际贸易主要研究贸易政策，尤其是贸易协议的签订，对目标区域的社会经济效应，如GDP、就业、进出口、最终消费、投资与储蓄等。适用范围（但不仅限于）：跨太平洋战略经济伙伴关系协定（TPP）、区域全面经济伙伴关系协定（RCEP）、中澳自贸协定、中国自由贸易试验区等。</p>
@@ -96,7 +96,7 @@
           <div class="child left">
             <p class="childTitle"><a href="{% url 'app:env' %}">环境能源</a></p>
             <div class="childImg">
-              <a href="{% url 'app:env' %}"><img src="{% static 'images/img-3.png' %}"></a>
+              <a href="{% url 'app:env' %}"><img src="{{solution_img2.img}}"></a>
             </div>
             <div class="childInfo">
               <p>碳税，碳排放，碳交易机制，能源，环境，污染物排放</p>
@@ -108,7 +108,7 @@
           <div class="child left">
             <p class="childTitle"><a href="{% url 'app:source' %}">资源</a></p>
             <div class="childImg">
-              <a href="{% url 'app:source' %}"><img src="{% static 'images/img-4.png'  %}"></a>
+              <a href="{% url 'app:source' %}"><img src="{{solution_img3.img}}"></a>
             </div>
             <div class="childInfo">
               <p>研究宏观政策以及资源政策对水土资源的配置、利用效率的影响</p>
@@ -118,9 +118,9 @@
             </div>
           </div>
           <div class="child left">
-            <p class="childTitle"><a href="html/解决方案/disaster.html">灾害评估</a></p>
+            <p class="childTitle"><a href="{% url 'app:disaster' %}">灾害评估</a></p>
             <div class="childImg">
-              <a href="html/解决方案/disaster.html"><img src="images/img-5.png"></a>
+              <a href="{% url 'app:disaster' %}"><img src="{{solution_img4.img}}"></a>
             </div>
             <div class="childInfo">
               <p>利用CGE模型评估不同自然灾害（洪灾、旱灾、水污染和水生态，滑坡，泥石流，地震）的经济影响</p>
@@ -130,9 +130,9 @@
             </div>
           </div>
           <div class="child left">
-            <p class="childTitle"><a href="html/解决方案/labor.html">劳动力 </a></p>
+            <p class="childTitle"><a href="{% url 'app:labor' %}">劳动力 </a></p>
             <div class="childImg">
-              <a href="html/解决方案/labor.html"><img src="images/img-6.png"></a>
+              <a href="{% url 'app:labor' %}"><img src="{{ solution_img5.img }}"></a>
             </div>
             <div class="childInfo">
               <p>就业率，工资，劳动力转移</p>
@@ -142,9 +142,9 @@
             </div>
           </div>
           <div class="child left">
-            <p class="childTitle"><a href="html/解决方案/poverty.html">贫困</a></p>
+            <p class="childTitle"><a href="{% url 'app:poverty' %}">贫困</a></p>
             <div class="childImg">
-              <a href="html/解决方案/poverty.html"><img src="images/img-7.png"></a>
+              <a href="{% url 'app:poverty' %}"><img src="{{ solution_img6.img }}"></a>
             </div>
             <div class="childInfo">
               <p>研究全球贸易、环境政策、宏观经济政策、气候变化以及相关政策等对目标国家贫困的影响</p>
@@ -154,9 +154,9 @@
             </div>
           </div>
           <div class="child left">
-            <p class="childTitle"><a href="html/解决方案/finance.html">金融</a></p>
+            <p class="childTitle"><a href="{% url 'app:finance' %}">金融</a></p>
             <div class="childImg">
-              <a href="html/解决方案/finance.html"><img src="images/img-8.png"></a>
+              <a href="{% url 'app:finance' %}"><img src="{{solution_img7.img}}"></a>
             </div>
             <div class="childInfo">
               <p>将金融变量及金融部门引入CGE模型，评估财政政策、汇率变动等外来冲击对经济体的影响</p>
@@ -166,9 +166,9 @@
             </div>
           </div>
           <div class="child left">
-            <p class="childTitle"><a href="html/解决方案/agri.html">农业</a></p>
+            <p class="childTitle"><a href="{% url 'app:agri' %}">农业</a></p>
             <div class="childImg">
-              <a href="html/解决方案/agri.html"><img src="images/img-9.png"></a>
+              <a href="{% url 'app:agri' %}"><img src="{{ solution_img8.img }}"></a>
             </div>
             <div class="childInfo">
               <p>宏观政策、农业政策对单个产业部门或多产业部门的影响。如种植结构调整、农业补贴、农产品贸易、农产品库存等政策分析</p>
